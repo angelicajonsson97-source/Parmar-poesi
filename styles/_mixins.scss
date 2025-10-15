@@ -1,2 +1,10 @@
 // Här lägger vi in våra mixins för att återanvända kod
 // Mixins: Layout, knappar, responsivitet, animationer – alltså **funktionella kodblock** EX flexbox
+@use "variables" as *;
+
+@mixin flexbox($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
