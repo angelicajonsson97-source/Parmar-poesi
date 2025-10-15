@@ -8,17 +8,28 @@
 </head>
 <body>
     <header>
-        <img src="#" alt="bakrundsbild med böcker och pärmar">
-        <h1>Välkommen till Pärmar & Poesi</h1>
-        <p>Här står det en liten text om vår webbplats.</p>
-        <button>CTA Anmäl dig</button>
+        <input type="checkbox" id="menu-toggle"/>
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html"> Hem </a></li>
+                <li><a href="boktips.html"> Boktips </a></li>
+                <li><a href="event.html"> Events </a></li>
+                <li><button class="cta-button">Anmäl dig</button></li>
+            </ul>
+        </nav>
     </header>
     <main>
+        <img src="image/Home.jpg" alt="Det är mörkt utomhus och det hänger belysning i träden. Man ser framsidan och entrén till en bokhandel vars framsida består av tre stora fönster. Innanför är det upplyst och man kan se flera bokhyllor fulla med böcker.">
+        <h1>Välkommen till Pärmar & Poesi</h1>
+        <p>Här står det en liten text om vår webbplats</p>
+        <button>CTA</button>
+    </main>
         <section class ="about">
             <h2>Om Oss</h2>
             <p>Detta är en webbplats som handlar om...</p>
         </section>
-        <section class="services">
+        <section class="boktips">  
             <h2>Veckans boktips</h2>
             <p>Här är våra boktips för veckan:</p>
             <ul>
@@ -26,15 +37,15 @@
                 <li><strong>Boktitel 2</strong> av Författare 2 - En kort beskrivning av boken.</li>
                 <li><strong>Boktitel 3</strong> av Författare 3 - En kort beskrivning av boken.</li>
             </ul>
+            <a href="#" class="more-info-button">Hitta fler boktips</a>
         </section>
         <section class="events">
             <h2>Events</h2>
             <p>Information om kommande events.</p>
         </section>
-    </main>
 
     <footer>
-        <p>&copy; 2025 Pärmar & Poesi, alla rättigheter förbehållna.</p>
+        <p>&copy; 2025 Pärmar & Poesi, alla rättigheter förbehållna. kontakt@parmarpoesi.se 010 111 222</p>
     </footer>
 </body>
 </html>
