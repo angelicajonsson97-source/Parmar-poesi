@@ -2,9 +2,21 @@
 // Mixins: Layout, knappar, responsivitet, animationer – alltså **funktionella kodblock** EX flexbox
 @use "variables" as *;
 
-@mixin flexbox($direction: row, $justify: center, $align: center) {
+@mixin flexbox {
     display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
+    justify-content: center;
+    align-items: center;
+}
+@mixin button {
+    background-color: $primary-color;
+    color: $text-color;
+    font-family: $font-family;
+    border: none;
+    border-radius: $radius;
+    padding: 0.8rem 1.2rem;
+
+    &:hover {
+        background-color: color.adjust($primary-color, $lightness: -10%);
+        cursor: pointer;
+    }
 }
