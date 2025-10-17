@@ -2,17 +2,107 @@
 // Mixins: Layout, knappar, responsivitet, animationer – alltså **funktionella kodblock** EX flexbox
 @use "variables" as *;
 
-@mixin flexbox {
+@mixin menu {
+/* Grundläggande meny-stilar */
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 1rem;
+
+ #menu-toggle {
+  display: none;
+}
+
+/* Hamburgarikon - visas endast i mobilvy */
+.menu-icon {
+  display: block;
+  font-size: 1.8rem;
+}
+
+.menu {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  background-color: $menu-color;
+  width: 150px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Visa menyn när checkboxen är checkad - Använder CSS-sibling selector för att visa menyn */
+#menu-toggle:checked + .menu-icon + .menu {
+  display: flex;
+}
+
+/* Menylänkar */
+.menu a {
+  display: block;
+  padding: 10px 15px;
+  color: $menu-bg;
+  text-decoration: none;
+}
+
+/* main-innehåll */
+main {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #c6caf0b0;
+  color: rgb(51, 51, 51);
+}
+
+h2 {
+  padding-bottom: 1rem;
+}
+
+/* Desktopvy */
+@media screen and (min-width: 768px) {
+  .menu {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    background-color: $dark-color;
-    border: 1px solid;
+    justify-content: flex-end;
+    background: transparent;
+	  width: auto;
+    max-height: none;
     padding: 2rem;
+  }
+  .menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1.5rem;
+  }
+  .menu li{
+    font-size: 1.5rem;
+  }
+  .menu-icon {
+    display: none;
+  }
+  
+  .menu a {
+    padding: 1rem 1rem 0 0;
+  }
 
+  .menu a:hover {
+    color: $dark-color;
+  }
 }
+}
+
+@mixin flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: $primary-color;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+  img {
+    height: 50px;
+  }
+}
+
 @mixin button {
     background-color: $primary-color;
     color: $text-color;
@@ -22,7 +112,7 @@
     padding: 0.8rem 1.2rem;
 
     &:hover {
-        background-color: color.adjust($primary-color, $lightness: -10%);
+       
         cursor: pointer;
     }
 }

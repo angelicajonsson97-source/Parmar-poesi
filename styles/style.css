@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -5,76 +6,109 @@
 }
 
 header {
-  text-align: center;
-}
-
-body {
-  font-family: "arial", helvetica;
-  background-color: #A2A79E;
-  color: #ebeaea;
-  line-height: 1.6;
-}
-
-main {
-  position: relative;
-  display: inline-block;
-}
-main .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1rem 2rem;
-  border-radius: 0.6rem;
-}
-main {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-section {
+  /* Grundläggande meny-stilar */
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  background-color: #510b02;
-  border: 1px solid;
-  padding: 2rem;
-  flex-wrap: wrap;
-}
-
-footer {
-  text-align: center;
+  justify-content: space-between;
   padding: 1rem;
-  background-color: #510b02;
-  color: #ebeaea;
-  font-size: 0.9rem;
-  margin-top: 2rem;
+}
+header #menu-toggle {
+  display: none;
+}
+header {
+  /* Hamburgarikon - visas endast i mobilvy */
+}
+header .menu-icon {
+  display: block;
+  font-size: 1.8rem;
+}
+header .menu {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  width: 150px;
+  position: relative;
+  z-index: 10;
+}
+header {
+  /* Visa menyn när checkboxen är checkad - Använder CSS-sibling selector för att visa menyn */
+}
+header #menu-toggle:checked + .menu-icon + .menu {
   display: flex;
-  justify-content: center;
+}
+header {
+  /* Menylänkar */
+}
+header .menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+}
+header {
+  /* main-innehåll */
+}
+header main {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: rgba(198, 202, 240, 0.6901960784);
+  color: rgb(51, 51, 51);
+}
+header h2 {
+  padding-bottom: 1rem;
+}
+header {
+  /* Desktopvy */
+}
+@media screen and (min-width: 768px) {
+  header .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: transparent;
+    width: auto;
+    max-height: none;
+    padding: 2rem;
+  }
+  header .menu ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1.5rem;
+  }
+  header .menu li {
+    font-size: 1.5rem;
+  }
+  header .menu-icon {
+    display: none;
+  }
+  header .menu a {
+    padding: 1rem 1rem 0 0;
+  }
+  header .menu a:hover {
+    color: #510b02;
+  }
+}
+header img {
+  max-height: 50px;
+}
+
+.main-sections {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #A2A79E;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.main-sections img {
+  height: 50px;
+}
+.main-sections {
   flex-direction: row;
-  gap: 1rem;
-}
-footer img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  margin-right: 0.5rem;
-}
-footer .footer-links {
-  margin-top: 0.5rem;
-}
-footer .footer-links a {
-  color: #ebeaea;
-  margin: 0 0.5rem;
-}
-footer .footer-links a:hover {
-  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
