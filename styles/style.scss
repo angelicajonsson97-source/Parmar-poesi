@@ -6,6 +6,20 @@
     box-sizing: border-box;
 }
 header {
+<<<<<<< HEAD
+    @include menu;
+
+    img {
+        max-height: 50px;
+
+    }
+}
+
+.main-sections {
+    @include flexbox;
+    flex-direction: row;
+    
+=======
  text-align: center;
 }
 
@@ -76,4 +90,5 @@ main {
       }
     }
   }
+>>>>>>> main
 }
