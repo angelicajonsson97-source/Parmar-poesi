@@ -1,9 +1,80 @@
-.social-links img {
-    width: 30px;
-    height: 30px;
-    margin: 0 8px;
-    transition: transform 0.3s ease;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.social-links img:hover {
-    transform: scale(1.1);
+
+header {
+  text-align: center;
 }
+
+body {
+  font-family: "arial", helvetica;
+  background-color: #A2A79E;
+  color: #ebeaea;
+  line-height: 1.6;
+}
+
+main {
+  position: relative;
+  display: inline-block;
+}
+main .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem 2rem;
+  border-radius: 0.6rem;
+}
+main {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #510b02;
+  border: 1px solid;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #510b02;
+  color: #ebeaea;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+footer img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+footer .footer-links {
+  margin-top: 0.5rem;
+}
+footer .footer-links a {
+  color: #ebeaea;
+  margin: 0 0.5rem;
+}
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
