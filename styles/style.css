@@ -1,76 +1,18 @@
-@charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Error: Expected identifier.
+ *     ,
+ * 108 | @@ -16,7 +112,7 @@
+ *     |  ^
+ *     '
+ *   _mixins.scss 108:2  @use
+ *   style.scss 2:1      root stylesheet */
 
-header {
-  text-align: center;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Expected identifier.\a     \2577 \a 108 \2502  @@ -16,7 +112,7 @@\d\a     \2502   ^\a     \2575 \a   _mixins.scss 108:2  @use\a   style.scss 2:1      root stylesheet";
 }
-
-main {
-  position: relative;
-  display: inline-block;
-}
-main .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1rem 2rem;
-  border-radius: 0.6rem;
-}
-main {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.footer {
-  background: #A2A79E;
-  padding: 2rem;
-  text-align: left;
-  /* --- SOCIALA MEDIER --- /
-  .social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-
-    img {
-      width: 35px;   // lagom för sociala medier
-      height: auto;
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-  }
-
-  / --- SPONSORER / LOGGOR --- */
-}
-.footer .sponsor-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 1.5rem;
-}
-.footer .sponsor-logos img {
-  width: 60px;
-  height: auto;
-  opacity: 0.9;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-.footer .sponsor-logos img:hover {
-  transform: scale(1.05);
-  opacity: 1;
-}
-
-/*# sourceMappingURL=style.css.map */
