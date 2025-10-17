@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <img src="Logga.jpg" alt="Ilistration med stående pärmar och text Pärmar och Poesi">
+        <img src="image/Logga.jpg" alt="Ilistration med stående pärmar och text Pärmar och Poesi">
         <input type="checkbox" id="menu-toggle"/>
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <nav class="menu">
@@ -17,30 +17,71 @@
                 <li><a href="index.html"> Hem </a></li>
                 <li><a href="boktips.html"> Boktips </a></li>
                 <li><a href="event.html"> Events </a></li>
-                <li><button class="rounded-full bg-gray-500 text-white hover:bg-gray-100 hover:text-black py-3 px-6 font-semibold hover:cursor-pointer">Anmäl dig</button></li>
-            </ul>
+                <li><a href="#form1"> 
+                     <button class="rounded-full bg-gray-500 text-white hover:bg-gray-100 hover:text-black py-3 px-6 font-semibold hover:cursor-pointer">Anmäl dig</button></li>
+            </a>
+                    </ul>
         </nav>
     </header>
     <main>
         <img src="image/Event.jpg" alt="En uppslagen bok utan text på sidan med ett rött löv som ligger på gräset"class="mx-auto">
         <h1>EVENT</h1>
         <p>Här står det en liten text om vår webbplats</p>
-        <button class="rounded-full bg-gray-500 text-white hover:bg-gray-100 hover:text-black py-3 px-6 font-semibold hover:cursor-pointer">Anmäl dig här till kommande Event</button>
+        <!-- <button class="rounded-full bg-gray-500 text-white hover:bg-gray-100 hover:text-black py-3 px-6 font-semibold hover:cursor-pointer">Anmäl dig här till kommande Event</button> -->
     </main>
              <section class="events">
             <h2>Events</h2>
             <p>Information om kommande events.</p>
-             
+            
             <ul class="grid grid-cols-1 lg:grid-cols-3">
                 <li><img src="image/Sign.jpg" alt="Ett bord med staplar av flera olika böcker."><br><strong>Signering av Alex Schulmans nya bok 17 Juni</strong> Fredag 7 november, kl. 17:00</li>
                 <li><img src="image/Poesikväll.jpg" alt="Gamlga poesibäcker från hela välden i en bokhylla"><br><strong>Poesikväll</strong> xxxxx </li>
                 <li><img src="image/sprakcafe.jpg" alt="Bild på en kvinna med mörkt lockigt hår som skrattar och står ihop med flera personer"><br><strong>Språkcafé</strong> Fredag 24 oktober, 15:00-16:45</li>
             </ul>
+            <br>
+           <br>
 
+             <h3>Anmäl dig i nedan formulär</h3>
+             <br>
+<form class="form" id="form1">
+        <label for="fname">För- och efternamn:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="email">e-mailadress:</label><br>
+        <input type="text" id="email" name="email" value=""><br><br>
+        <!-- <input type="submit" value="Skicka"> -->
+        <button class="rounded-full bg-gray-500 text-white hover:bg-gray-100 hover:text-black py-3 px-6 font-semibold hover:cursor-pointer">Skicka</button>
+      </form>
         </section>
 
-    <footer>
-        <p>&copy; 2025 Pärmar & Poesi, alla rättigheter förbehållna.</p>
+   <footer class="footer">
+    <p></p>
+
+    <ul class="footer-links">
+    
+    <li><a href="#">Öppetider</a></li> 
+    <li><a href="#">Adress</a></li>   
+    <li><a href="#">Kontakta oss</a></li>
+    <li><a href="#">Cookies</a></li>
+    <li><a href="#">Integritetspolicy</a></li>
+    <li><a href="#">Villkor</a></li>
+    <li><a href="#">Sociala medier</a></li>
+  </ul>
+
+  <section class="social-links">
+    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+    <a href="#"><img src="images/twitter-pride.png" alt="Twitter"></a>
+    <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
+  </section>
+
+  <section class="sponsor-logos">
+    <img src="postnord.png" alt="PostNord">
+    <img src="dhl.png" alt="DHL">
+    <img src="best.png" alt="Best Transport">
+    <img src="budbee.png" alt="Budbee">
+    <img src="instabox.png" alt="Instabox">
+  </section>
+    <p>&copy; 2024 Pärmar & Poesi. Alla rättigheter förbehållna. kontakt@parmarpoesi.se 010 111 222</p>
     </footer>
 </body>
 </html>

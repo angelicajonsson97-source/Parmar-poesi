@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @charset "UTF-8";
 * {
   margin: 0;
@@ -112,3 +113,23 @@ header img {
 }
 
 /*# sourceMappingURL=style.css.map */
+=======
+/* Error: Expected identifier.
+ *     ,
+ * 108 | @@ -16,7 +112,7 @@
+ *     |  ^
+ *     '
+ *   _mixins.scss 108:2  @use
+ *   style.scss 2:1      root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Expected identifier.\a     \2577 \a 108 \2502  @@ -16,7 +112,7 @@\d\a     \2502   ^\a     \2575 \a   _mixins.scss 108:2  @use\a   style.scss 2:1      root stylesheet";
+}
+>>>>>>> main
