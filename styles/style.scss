@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 header {
-<<<<<<< HEAD
+
     @include menu;
 
     img {
@@ -18,9 +18,7 @@ header {
 .main-sections {
     @include flexbox;
     flex-direction: row;
-    
-=======
- text-align: center;
+    text-align: center;
 }
 
 main {
@@ -90,5 +88,4 @@ main {
       }
     }
   }
->>>>>>> main
 }
