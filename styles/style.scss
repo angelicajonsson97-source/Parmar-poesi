@@ -55,9 +55,11 @@ main {
         transform: translate(-50%, -50%);
         
         color: white; 
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 1rem 2rem;
+        text-align: left;
+        font-size: 40px;
+        font-weight: bolder;
+
+        padding: 1.5rem 2rem;
         border-radius: $radius;
         max-width: 400px;
         width: 80%;
@@ -67,33 +69,41 @@ main {
 /* MAIN SECTIONS (RESPONSIV TRE-KOLUMNS LAYOUT FÖR INDEX) */
 .main-sections {
     display: flex;
-    flex-direction: column; /* Mobil: Staplad */
+    flex-direction: column-reverse;
     padding: 2rem 1rem;
     gap: 3rem; 
-    background-color: #ffffff;
+    // RAD 1: TA BORT DENNA LINJE FÖR ATT HA EN VIT BAKGRUND MELLAN KOLUMNERNA:
+    // background-color: #ffffff; 
     
     @media screen and (min-width: 768px) {
-        flex-direction: row; /* Desktop: Rader */
+        flex-direction: row;
         justify-content: space-around;
         align-items: flex-start;
         padding: 4rem 2rem; 
         gap: 2rem;
     }
 }
-
 /* Stil för varje kolumn inuti main-sections */
 .main-sections > section {
-    text-align: left;
+    text-align: center;
+    
+
+    background-color: $primary-color;
+    padding: 3rem; 
+    border-radius: $radius;
+
     
     @media screen and (min-width: 768px) {
         flex-basis: 30%; 
         max-width: 33.33%;
-        padding: 0 1rem;
+        padding: 1.5rem 1rem; // Justera padding för desktop
     }
     
     h2 {
         text-align: center;
         margin-bottom: 1rem;
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
     }
 
     p {

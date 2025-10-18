@@ -24,7 +24,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background-color: #E8C5C3;
   position: relative;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -99,6 +99,7 @@ header {
     margin-left: 1.5rem;
   }
   header .menu li {
+    margin-left: 3rem;
     font-size: 1.5rem;
   }
   header .menu a {
@@ -136,9 +137,10 @@ main .hero-text {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1rem 2rem;
+  text-align: left;
+  font-size: 40px;
+  font-weight: bolder;
+  padding: 1.5rem 2rem;
   border-radius: 0.6rem;
   max-width: 400px;
   width: 80%;
@@ -147,14 +149,13 @@ main .hero-text {
 /* MAIN SECTIONS (RESPONSIV TRE-KOLUMNS LAYOUT FÖR INDEX) */
 .main-sections {
   display: flex;
-  flex-direction: column; /* Mobil: Staplad */
+  flex-direction: column-reverse;
   padding: 2rem 1rem;
   gap: 3rem;
-  background-color: #ffffff;
 }
 @media screen and (min-width: 768px) {
   .main-sections {
-    flex-direction: row; /* Desktop: Rader */
+    flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
     padding: 4rem 2rem;
@@ -164,18 +165,23 @@ main .hero-text {
 
 /* Stil för varje kolumn inuti main-sections */
 .main-sections > section {
-  text-align: left;
+  text-align: center;
+  background-color: #E8C5C3;
+  padding: 3rem;
+  border-radius: 0.6rem;
 }
 @media screen and (min-width: 768px) {
   .main-sections > section {
     flex-basis: 30%;
     max-width: 33.33%;
-    padding: 0 1rem;
+    padding: 1.5rem 1rem;
   }
 }
 .main-sections > section h2 {
   text-align: center;
   margin-bottom: 1rem;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
 }
 .main-sections > section p {
   max-width: 65ch;

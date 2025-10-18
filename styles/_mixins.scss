@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 2rem;
     background-color: $primary-color;
     position: relative;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -103,7 +103,9 @@
         }
         
         .menu li{
+            margin-left: 3rem;
             font-size: 1.5rem;
+            
         }
 
         .menu a {
