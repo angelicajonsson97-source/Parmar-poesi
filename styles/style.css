@@ -5,6 +5,26 @@ body {
   line-height: 1.6;
 }
 
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 0;
+  /* Make the list horizontal */
+  display: flex;
+  gap: 30px;
+  flex-wrap: nowrap;
+  align-items: center;
+  white-space: nowrap;
+  /* Optional: center them horizontally */
+  justify-content: center;
+}
+
+.footer ul li a {
+  color: hsl(0, 6.6666666667%, 7.5%);
+  text-decoration: none;
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
