@@ -1,0 +1,60 @@
+@use "variables" as *;
+@use "mixins" as *;
+@use "footer";
+// här lägger vi styles som används i hela sidan
+* 
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.footer {
+  // gemensam footer-stil
+  background: $primary-color;
+  padding: 2rem;
+  text-align: left;
+
+  /* --- SOCIALA MEDIER --- */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    img {
+      width: 35px;   // lagom för sociala medier
+      height: auto;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  /* --- SPONSORER / LOGGOR --- */
+  .sponsor-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 1.5rem;
+
+    img {
+      width: 60px;   // lite större loggor
+      height: auto;
+      opacity: 0.9;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+    }
+  }
+}

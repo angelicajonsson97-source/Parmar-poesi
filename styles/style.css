@@ -1,9 +1,57 @@
-.social-links img {
-    width: 30px;
-    height: 30px;
-    margin: 0 8px;
-    transition: transform 0.3s ease;
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 1.6;
 }
-.social-links img:hover {
-    transform: scale(1.1);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.footer {
+  background: #A2A79E;
+  padding: 2rem;
+  text-align: left;
+  /* --- SOCIALA MEDIER --- */
+}
+.footer .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer .social-links img {
+  width: 35px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.footer .social-links img:hover {
+  transform: scale(1.1);
+}
+.footer {
+  /* --- SPONSORER / LOGGOR --- */
+}
+.footer .sponsor-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+.footer .sponsor-logos img {
+  width: 60px;
+  height: auto;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.footer .sponsor-logos img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
