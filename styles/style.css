@@ -1,17 +1,39 @@
-<<<<<<< HEAD
 @charset "UTF-8";
+/* GLOBAL STYLING */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  background-color: #ffffff; /* Hela sidan är vit */
+  color: #131b23;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+h2 {
+  padding-bottom: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* HEADER OCH NAVIGATION */
 header {
-  /* Grundläggande meny-stilar */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 2rem;
+  background-color: #E8C5C3;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header img {
+  height: 50px;
+}
+header {
+  /* BAS-STYLING: display: flex, background, etc. */
 }
 header #menu-toggle {
   display: none;
@@ -25,15 +47,22 @@ header .menu-icon {
 }
 header .menu {
   list-style: none;
-  display: none;
+  display: none; /* Dölj som standard på mobil */
   flex-direction: column;
   background-color: #f8f8f8;
   width: 150px;
-  position: relative;
+  position: absolute; /* Använd absolut position för att falla ner under headern */
+  top: 100%;
+  right: 0;
   z-index: 10;
+  padding: 0;
+}
+header .menu ul {
+  padding: 0;
+  margin: 0;
 }
 header {
-  /* Visa menyn när checkboxen är checkad - Använder CSS-sibling selector för att visa menyn */
+  /* Visa menyn när checkboxen är checkad */
 }
 header #menu-toggle:checked + .menu-icon + .menu {
   display: flex;
@@ -48,88 +77,199 @@ header .menu a {
   text-decoration: none;
 }
 header {
-  /* main-innehåll */
-}
-header main {
-  min-height: 100vh;
-  padding: 4rem 2rem;
-  text-align: center;
-  background-color: rgba(198, 202, 240, 0.6901960784);
-  color: rgb(51, 51, 51);
-}
-header h2 {
-  padding-bottom: 1rem;
-}
-header {
   /* Desktopvy */
 }
 @media screen and (min-width: 768px) {
+  header .menu-icon {
+    display: none;
+  }
   header .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    display: block; /* Visa menyn */
+    position: static; /* Återställ position */
     background: transparent;
     width: auto;
     max-height: none;
-    padding: 2rem;
+    padding: 0;
   }
   header .menu ul {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
     margin-left: 1.5rem;
   }
   header .menu li {
+    margin-left: 3rem;
     font-size: 1.5rem;
-  }
-  header .menu-icon {
-    display: none;
   }
   header .menu a {
     padding: 1rem 1rem 0 0;
+    color: #131b23; /* Använd mörk färg för synlighet på ljus header */
   }
   header .menu a:hover {
     color: #510b02;
   }
 }
+header {
+  /* FUNKTIONALITET: meny-logik, ikon-växling */
+}
 header img {
   max-height: 50px;
 }
 
+/* MAIN OCH HERO SEKTION */
+main {
+  position: relative;
+  display: block;
+  padding: 0;
+  background-color: #ffffff; /* Säkerställer vit bakgrund för main */
+}
+main img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 500px;
+  object-fit: cover;
+}
+main .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: left;
+  font-size: 40px;
+  font-weight: bolder;
+  padding: 1.5rem 2rem;
+  border-radius: 0.6rem;
+  max-width: 400px;
+  width: 80%;
+}
+
+/* MAIN SECTIONS (RESPONSIV TRE-KOLUMNS LAYOUT FÖR INDEX) */
 .main-sections {
   display: flex;
+  flex-direction: column-reverse;
+  padding: 2rem 1rem;
+  gap: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .main-sections {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 4rem 2rem;
+    gap: 2rem;
+  }
+}
+
+/* Stil för varje kolumn inuti main-sections */
+.main-sections > section {
+  text-align: center;
+  background-color: #E8C5C3;
+  padding: 3rem;
+  border-radius: 0.6rem;
+}
+@media screen and (min-width: 768px) {
+  .main-sections > section {
+    flex-basis: 30%;
+    max-width: 33.33%;
+    padding: 1.5rem 1rem;
+  }
+}
+.main-sections > section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+}
+.main-sections > section p {
+  max-width: 65ch;
+  margin: 0 auto 1em;
+}
+
+/* Anpassning för boktipsbilden (centrering) */
+.boktips img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* Styling för "Hitta fler boktips/Events"-knappen !!!!!!MÅSTE ÄNDRAS*/
+.more-info-button {
+  background-color: #E8C5C3;
+  color: #f8f8f8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.8rem 1.2rem;
+  transition: background-color 0.3s ease;
+}
+.more-info-button:hover {
+  background-color: rgb(217.8674698795, 161.3614457831, 158.1325301205);
+  cursor: pointer;
+}
+.more-info-button {
+  /* Använd knappen mixin för basstil */
+  background-color: transparent;
+  color: #131b23;
+  border: 2px solid #131b23;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+}
+.more-info-button:hover {
+  background-color: #131b23;
+  color: white;
+}
+
+/* FOOTER STYLING */
+.footer {
+  background: #E8C5C3;
+  padding: 2rem;
+  color: #f8f8f8;
+}
+.footer .footer-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.footer .footer-links li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.footer .footer-links li a {
+  color: #f8f8f8;
+  text-decoration: none;
+}
+.footer .footer-links li a:hover {
+  text-decoration: underline;
+}
+.footer .social-links {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  background-color: #A2A79E;
-  position: relative;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 1.5rem;
 }
-.main-sections img {
-  height: 50px;
+.footer .sponsor-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1.5rem;
 }
-.main-sections {
-  flex-direction: row;
+.footer > p {
+  text-align: center;
+  margin-top: 2rem;
+}
+.footer > p a {
+  color: #f8f8f8;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
-=======
-/* Error: Expected identifier.
- *     ,
- * 108 | @@ -16,7 +112,7 @@
- *     |  ^
- *     '
- *   _mixins.scss 108:2  @use
- *   style.scss 2:1      root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected identifier.\a     \2577 \a 108 \2502  @@ -16,7 +112,7 @@\d\a     \2502   ^\a     \2575 \a   _mixins.scss 108:2  @use\a   style.scss 2:1      root stylesheet";
-}
->>>>>>> main
