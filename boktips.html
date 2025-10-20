@@ -3,49 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Pärmar & Poesi</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>
+        <img src="image/Logga.jpg" alt="Ilistration med stående pärmar och text Pärmar och Poesi">
         <input type="checkbox" id="menu-toggle"/>
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <nav class="menu">
             <ul>
                 <li><a href="index.html"> Hem </a></li>
-                <li><a href="#"> Boktips </a></li>
-                <li><a href="#"> Events </a></li>
-                <li><button class="cta-button">Anmäl dig</button></li>
+                <li><a href="boktips.html"> Boktips </a></li>
+                <li><a href="event.html"> Events </a></li>
+                 <li><a href="event.html#form1"> 
+                     <button class="rounded-full bg-gray-500 text-white hover:bg-gray-100 hover:text-black py-3 px-6 font-semibold hover:cursor-pointer">Anmäl dig</button></li>
+            </a>
             </ul>
         </nav>
     </header>
     <main>
-        <img src="#" alt="bakrundsbild med böcker och pärmar">
-        <h1>Välkommen till Pärmar & Poesi</h1>
+        <img src="image/Boktips.jpg" alt="7 st bruna läderbundna böcker som ligger på ett träbord lutande emot varandra"class="mx-auto">
+        <h1>BOKTIPS</h1>
         <p>Här står det en liten text om vår webbplats.</p>
-        <button>CTA Anmäl dig</button>
+       <button class="rounded-full bg-gray-500 text-white hover:bg-gray-100 hover:text-black py-3 px-6 font-semibold hover:cursor-pointer">Anmäl dig här till kommande Event</button>
     </main>
-        <section class ="about">
-            <h2>Om Oss</h2>
-            <p>Detta är en webbplats som handlar om...</p>
-        </section>
+        
         <section class="boktips">
             <h2>Veckans boktips</h2>
             <p>Här är våra boktips för veckan:</p>
-            <ul>
-                <li><strong>Boktitel 1</strong> av Författare 1 - En kort beskrivning av boken.</li>
-                <li><strong>Boktitel 2</strong> av Författare 2 - En kort beskrivning av boken.</li>
-                <li><strong>Boktitel 3</strong> av Författare 3 - En kort beskrivning av boken.</li>
-            </ul>
-            <a href="#" class="more-info-button">Hitta fler boktips</a>
-        </section>
-        <section class="events">
-            <h2>Events</h2>
-            <p>Information om kommande events.</p>
-        </section>
+            <ul> 
+                <li><img src="image/17 juni.jpg" alt="c:\Users\ollek\OneDrive\Dokument\Front End\3 HTML och CSS\Examination\Bilder\17 juni.jpg">
+                    <h3>17 juni</h3> 
+                    <p> av Alex Schulman - Vidar är sig inte lik. Han har blivit avstängd från sin lärartjänst efter en våldsam incident på skolan. 
+                        Och i en bortglömd kartong hittar han av en slump telefonnumret till familjens gamla sommartorp. 
+                        När han slår numret svarar hans pappa, som är död sedan länge. Vidar har ringt till den 17 juni 1986, till en dag i sin barndom. 
+                        Med ens öppnar sig en fallucka till det förflutna. 
+                        Vidar ringer samtal efter samtal till den 17 juni och börjar kartlägga familjens varje rörelse.
+                        Samtidigt blir Vidar föremål för en brottsutredning och han träder över gräns efter gräns. 
+                        Medan dagen i barndomen långsamt öppnar upp sig, dras snaran i nutid åt.
+                        Alex Schulman har skrivit en hisnande roman om en resa i tiden, och om vad som formar en människa.</p></li>
+                <h4>Fler tips</h4>
+                <p>Här är det ett urval på fler tips</p>
+<li><img src="image/Tveljus del 1.jpg" alt="Framsida på en bok av Tonny Gullöv med svart bakgrund och en gammal manlig viking med långt vitt hår och skägg."><h3>Tveljus del 1</h3> av Tonny Gulløv - Palnatoke väntar rastlöst på att hans landsförvisning ska hävas. Under tiden bråkar han med sin son Palnar som inte vill bli krigare utan något så fånigt som byggmästare.
 
-    <footer>
-        <p>&copy; 2025 Pärmar & Poesi, alla rättigheter förbehållna.</p>
+Palnatoke måste dessutom eskortera den hänförande Anna Billung till en begravning djupt in i Otto den stores enorma rike. Palnatoke litar inte helt och hållet på Otto, eller på någon annan heller för den delen, och ser till att ta med sig ett par skepp med sina krigare. Och dessa får han god användning för.
+
+Efter en del bra och en del mindre bra beslut har Palnatoke gjort sig ovän med en kardinal, några biskopar, en handfull präster, en krigsherre på Lolland och kejsaren av Östfrankiska riket.
+
+Den galne jarlen och hans krigare är ohejdbara men nornorna visar sig ännu starkare.</li>
+                <li><img src="image/Midnatt.jpg" alt="Ilustread bild på en bokhandel i vinterskrud. Framsidans bakgrund är julröd och bokhandelsn fasad är ljusgrön och det lyser lampor i fönstrerna. Utanför går en kvinna och drar efter sig en kälke."><strong>Midnatt i den lilla bokhandeln</strong> av Jenny Colgan - Carmen har inget att göra. Hennes underbara bokhandel är inspelningsplatsen för en klichéartad julfilm, hon har blivit utkastad från sin systers hus och hennes livs kärlek har just flugit tusentals mil bort. Det verkar bli en mycket olycklig jul! Men när den äldre ägaren till butiken kommer till Carmen med en julönskan som riskerar att aldrig bli uppfylld, vet Carmen att hon måste göra allt för att få in pengar för att rädda inte bara hans resa, utan även själva butiken.
+
+Medan hon skyddar sig från en märklig försäljare som återkommande dyker upp i butiken upptäcker Carmen att böcker verkligen kan göra underverk och att de öppnar en hel värld för kunderna att förlora sig i.
+
+Men tiden rinner mot sitt slut, och det krävs mer än bara lite ny färg för att lösa Carmens problem. Med hjälp av grannarna, sina brors- och systerdöttrar och en mycket distraherande barnskötare, kanske Carmen just kan uppnå sitt största magitrick hittills...</li>
+            </ul>
+            <a href="#" class="more-info-button">Hitta fler boktips</a> 
+        </section>
+       
+
+    <footer class="footer">
+    <p></p>
+
+    <ul class="footer-links">
+    
+    <li><a href="#">Öppetider</a></li> 
+    <li><a href="#">Adress</a></li>   
+    <li><a href="#">Kontakta oss</a></li>
+    <li><a href="#">Cookies</a></li>
+    <li><a href="#">Integritetspolicy</a></li>
+    <li><a href="#">Villkor</a></li>
+    <li><a href="#">Sociala medier</a></li>
+  </ul>
+
+  <section class="social-links">
+    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
+    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
+    <a href="#"><img src="images/twitter-pride.png" alt="Twitter"></a>
+    <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
+  </section>
+
+  <section class="sponsor-logos">
+    <img src="postnord.png" alt="PostNord">
+    <img src="dhl.png" alt="DHL">
+    <img src="best.png" alt="Best Transport">
+    <img src="budbee.png" alt="Budbee">
+    <img src="instabox.png" alt="Instabox">
+  </section>
+    <p>&copy; 2025 Pärmar & Poesi. Alla rättigheter förbehållna. kontakt@parmarpoesi.se 010 111 222</p>
     </footer>
 </body>
 </html>

@@ -1,66 +1,48 @@
 @use "variables" as *;
 @use "mixins" as *;
-@use "footer";
-// här lägger vi styles som används i hela sidan
-* 
+@use "footer" as *;
 
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+header {
 
+    @include menu;
 
-.footer {
-  // gemensam footer-stil
-  background: $primary-color;
-  padding: 2rem;
-  text-align: left;
+    img {
+        max-height: 50px;
 
-  
+    }
+}
 
-  /* --- SOCIALA MEDIER --- */
-  .social-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-
+.main-sections {
+    @include flexbox;
+    flex-direction: row;
     
 
+ text-align: center;
+}
 
+main {
+    position: relative;
+    display: inline-block;
 
-    img {
-      width: 35px;   // lagom för sociala medier
-      height: auto;
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.1);
-      }
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 1rem 2rem;
+        border-radius: $radius;
     }
-  }
-
-  /* --- SPONSORER / LOGGOR --- */
-  .sponsor-logos {
-    display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 1.5rem;
-
-    img {
-      width: 60px;   // lite större loggor
-      height: auto;
-      opacity: 0.9;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-
-      &:hover {
-        transform: scale(1.05);
-        opacity: 1;
-      }
-    }
-  }
+    text-align: center;
+    
 }
+
+

@@ -3,53 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Pärmar & Poesi</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header>
+        <img src="image/Logga.jpg" alt="Ilistration med stående pärmar och text Pärmar och Poesi">
         <input type="checkbox" id="menu-toggle"/>
         <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <nav class="menu">
             <ul>
                 <li><a href="index.html"> Hem </a></li>
-                <li><a href="#"> Boktips </a></li>
-                <li><a href="#"> Events </a></li>
-                <li><button class="cta-button">Anmäl dig</button></li>
+                <li><a href="boktips.html"> Boktips </a></li>
+                <li><a href="event.html"> Events </a></li>
+                 <li><a href="event.html#form1"> 
+                     <button class="rounded-full bg-gray-500 text-white hover:bg-gray-100 hover:text-black py-3 px-6 font-semibold hover:cursor-pointer">Anmäl dig</button></li>
+            </a>
+        
             </ul>
         </nav>
     </header>
     <main>
-        <img src="#" alt="bakrundsbild med böcker och pärmar">
+        <img src="image/Home.jpg" alt="Det är mörkt utomhus och det hänger belysning i träden. Man ser framsidan och entrén till en bokhandel vars framsida består av tre stora fönster. Innanför är det upplyst och man kan se flera bokhyllor fulla med böcker.">
+        
+        <article class="hero-text">
         <h1>Välkommen till Pärmar & Poesi</h1>
-        <p>Här står det en liten text om vår webbplats.</p>
+        <p>Här står det en liten text om vår webbplats</p>
         <button>CTA</button>
+        </article>
     </main>
-        <section class ="about">
-            <h2>Om Oss</h2>
-            <p>Detta är en webbplats som handlar om...</p>
-        </section>
-        <section class="boktips">  
-            <h2>Veckans boktips</h2>
-            <p>Här är våra boktips för veckan:</p>
-            <ul>
-                <li><strong>Boktitel 1</strong> av Författare 1 - En kort beskrivning av boken.</li>
-                <li><strong>Boktitel 2</strong> av Författare 2 - En kort beskrivning av boken.</li>
-                <li><strong>Boktitel 3</strong> av Författare 3 - En kort beskrivning av boken.</li>
-            </ul>
-            <a href="#" class="more-info-button">Hitta fler boktips</a>
-        </section>
-        <section class="events">
-            <h2>Events</h2>
-            <p>Information om kommande events.</p>
+
+    <section class="main-sections">
+           <section class ="about">
+            <h2>Om oss</h2>
+            <p>lkjdölkjaölkdjölkj</p>
         </section>
 
+        <section class="boktips">  
+            <h2>Veckans boktips</h2>
+            <p>Här är vår boktips för veckan:</p>
+            <ul>
+                <li><img src="image/17 juni.jpg" alt="c:\Users\ollek\OneDrive\Dokument\Front End\3 HTML och CSS\Examination\Bilder\17 juni.jpg" > 
+                    <h3>17 juni</h3> 
+                    <p> av Alex Schulman - Vidar är sig inte lik. Han har blivit avstängd från sin lärartjänst efter en våldsam incident på skolan. 
+                        Och i en bortglömd kartong hittar han av en slump telefonnumret till familjens gamla sommartorp. 
+                        När han slår numret svarar hans pappa, som är död sedan länge. Vidar har ringt till den 17 juni 1986, till en dag i sin barndom. 
+                        Med ens öppnar sig en fallucka till det förflutna. 
+                        Vidar ringer samtal efter samtal till den 17 juni och börjar kartlägga familjens varje rörelse.
+                        Samtidigt blir Vidar föremål för en brottsutredning och han träder över gräns efter gräns. 
+                        Medan dagen i barndomen långsamt öppnar upp sig, dras snaran i nutid åt.
+                        Alex Schulman har skrivit en hisnande roman om en resa i tiden, och om vad som formar en människa.</p>
+                <h4>Fler tips</h4></li></li>
+                            </ul>
+            <a href="boktips.html" class="more-info-button">Hitta fler boktips</a>
+        </section>
+
+        <section class="events">
+            <h2>Events</h2>
+             <a href="event.html" class="more-info-button">Information om kommande events</a>
+        </section>
+    </section>
+ 
    
-       
-        
-       
     <footer class="footer">
-    <ul>
+    <ul class="footer-links">
+    
     <li><a href="#">Öppetider</a></li> 
     <li><a href="#">Adress</a></li>   
     <li><a href="#">Kontakta oss</a></li>
@@ -58,22 +77,24 @@
     <li><a href="#">Villkor</a></li>
     <li><a href="#">Sociala medier</a></li>
   </ul>
+   
 
-
-  <section class="social-links">
-    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-    <a href="#"><img src="images/twitter-pride.png" alt="Twitter"></a>
-    <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
-  </section>
-
-  <section class="sponsor-logos">
-    <img src="images/postnord.png" alt="PostNord">
-    <img src="images/dhl.png" alt="DHL">
-    <img src="images/best.png" alt="Best Transport">
-    <img src="images/budbee.png" alt="Budbee">
-    <img src="images/instabox.png" alt="Instabox">
-  </section>
+  <ul class="social-links">
+    <li><a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a></li>
+    <li><a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a></li>
+    <li><a href="#"><img src="images/twitter-pride.png" alt="Twitter"></a></li>
+    <li><a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a></li>
+  </ul>
+   
+  <ul class="sponsor-logos">
+  <li><img src="images/postnord.png" alt="PostNord"></li>
+  <li><img src="images/dhl.png" alt="DHL"></li>
+  <li><img src="images/best.png" alt="Best Transport"></li>
+  <li><img src="images/budbee.png" alt="Budbee"></li>
+  <li><img src="images/instabox.png" alt="Instabox"></li>
+  </ul>
+  
     <p>&copy; 2025 Pärmar & Poesi. Alla rättigheter förbehållna. kontakt@parmarpoesi.se 010 111 222</p>
+    </footer>
 </body>
 </html>
