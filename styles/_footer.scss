@@ -1,4 +1,4 @@
-$primary-color: hsl(0, 76%, 43%);
+$primary-color: #E8C5C3;
 body {
   font-family: 'Arial', sans-serif;
   background-color: #ffffff;
@@ -8,7 +8,7 @@ body {
 
 // Variabler (du kan ändra dessa lätt)
 .footer {
-  $primary-color: #A2A79E;
+ 
   background-color: $primary-color;
   color: #ccc;
   text-align: center;
@@ -47,7 +47,12 @@ body {
       color: hsl(0, 76%, 43%);
     }
   }
-
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
   // Sociala medier ikoner
   .social-links img {
     width: 25px;
@@ -63,16 +68,24 @@ body {
   }
 
   // Sponsorloggor
-  .sponsor-logos img {
-    width: 30px;
+  .sponsor-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 1.5rem;
+    width: 100%;
+   img {
+    width: 25px;
     height: auto;
     opacity: 0.9;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    gap: 3rem;
+    
 
     &:hover {
       transform: scale(1.05);
       opacity: 1;
     }
   }
-   }
+  }
+}

@@ -1,48 +1,152 @@
+// STYLE.SCSS (FIXAD VERSION)
+
 @use "variables" as *;
 @use "mixins" as *;
-@use "footer" as *;
+@use "footer" ;
 
+/* GLOBAL STYLING */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-header {
 
-    @include menu;
+body {
+    background-color: #ffffff; /* Hela sidan är vit */
+    color: $secondary-text-color;
+    font-family: $font-family;
+    line-height: 1.6;
+}
+
+h2 {
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* HEADER OCH NAVIGATION */
+header {
+    @include header-flex; /* BAS-STYLING: display: flex, background, etc. */
+    @include menu-behavior; /* FUNKTIONALITET: meny-logik, ikon-växling */
 
     img {
         max-height: 50px;
-
     }
 }
 
-.main-sections {
-    @include flexbox;
-    flex-direction: row;
-    
-
- text-align: center;
-}
-
+/* MAIN OCH HERO SEKTION */
 main {
     position: relative;
-    display: inline-block;
+    display: block; 
+    padding: 0;
+    background-color: #ffffff; /* Säkerställer vit bakgrund för main */
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-height: 500px; 
+        object-fit: cover;
+    }
 
     .hero-text {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 1rem 2rem;
+        
+        color: white; 
+        text-align: left;
+        font-size: 40px;
+        font-weight: bolder;
+
+        padding: 1.5rem 2rem;
         border-radius: $radius;
+        max-width: 400px;
+        width: 80%;
     }
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    
 }
 
+/* MAIN SECTIONS (RESPONSIV TRE-KOLUMNS LAYOUT FÖR INDEX) */
+.main-sections {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 2rem 1rem;
+    gap: 3rem; 
+    // RAD 1: TA BORT DENNA LINJE FÖR ATT HA EN VIT BAKGRUND MELLAN KOLUMNERNA:
+    // background-color: #ffffff; 
+    
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 4rem 2rem; 
+        gap: 2rem;
+    }
+}
+/* Stil för varje kolumn inuti main-sections */
+.main-sections > section {
+    text-align: center;
+    
+
+    background-color: $primary-color;
+    padding: 3rem; 
+    border-radius: $radius;
+
+    
+    @media screen and (min-width: 768px) {
+        flex-basis: 30%; 
+        max-width: 33.33%;
+        padding: 1.5rem 1rem; // Justera padding för desktop
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+        color: black;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    p {
+        max-width: 65ch; 
+        margin: 0 auto 1em;
+    }
+}
+
+/* Anpassning för boktipsbilden (centrering) */
+.boktips img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+/* Styling för "Hitta fler boktips/Events"-knappen !!!!!!MÅSTE ÄNDRAS*/
+.more-info-button {
+    @include button-base; /* Använd knappen mixin för basstil */
+    background-color: transparent; 
+    color: $secondary-text-color;
+    border: 2px solid $secondary-text-color; 
+    border-radius: 25px; 
+    text-decoration: none;
+    display: inline-block;
+    
+    &:hover {
+        background-color: $secondary-text-color;
+        color: white; 
+    }
+}
+
+
+
+    
+    // & > p {
+    //     text-align: center;
+    //     margin-top: 2rem;
+        
+    //     a {
+    //         color: $text-color;
+    //         text-decoration: none;
+    //     }
+    // }
 
