@@ -83,28 +83,15 @@ body {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #ffffff; /* Hela sidan är vit */
-  color: #131b23;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-}
-
-h2 {
-  padding-bottom: 1rem;
-  font-size: 1.8rem;
-  text-align: center;
-}
-
 /* HEADER OCH NAVIGATION */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: #E8C5C3;
+  padding: 1rem 2rem; /* kolla på detta senare*/
+  background-color: #f8f8f8;
   position: relative;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #6e6e6e;
   /* BAS-STYLING: display: flex, background, etc. */
   /* Hamburgarikon - visas endast i mobilvy */
   /* Visa menyn när checkboxen är checkad */
@@ -154,7 +141,7 @@ header .menu a {
   header .menu {
     display: block; /* Visa menyn */
     position: static; /* Återställ position */
-    background: transparent;
+    background: #f8f8f8;
     width: auto;
     max-height: none;
     padding: 0;
@@ -175,7 +162,7 @@ header .menu a {
     color: #131b23; /* Använd mörk färg för synlighet på ljus header */
   }
   header .menu a:hover {
-    color: #510b02;
+    color: #6e6e6e;
   }
 }
 header img {
@@ -187,24 +174,25 @@ main {
   position: relative;
   display: block;
   padding: 0;
-  background-color: #ffffff; /* Säkerställer vit bakgrund för main */
+  background-color: #f8f8f8; /* Säkerställer vit bakgrund för main */
 }
 main img {
   width: 100%;
   height: auto;
   display: block;
   max-height: 500px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main .hero-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  text-align: left;
-  font-size: 40px;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #f8f8f8;
+  text-align: center;
+  font-size: 35px;
   font-weight: bolder;
   padding: 1.5rem 2rem;
   border-radius: 0.6rem;
@@ -215,9 +203,10 @@ main .hero-text {
 /* MAIN SECTIONS (RESPONSIV TRE-KOLUMNS LAYOUT FÖR INDEX) */
 .main-sections {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   padding: 2rem 1rem;
   gap: 3rem;
+  color: #131b23;
 }
 @media screen and (min-width: 768px) {
   .main-sections {
@@ -232,9 +221,10 @@ main .hero-text {
 /* Stil för varje kolumn inuti main-sections */
 .main-sections > section {
   text-align: center;
-  background-color: #E8C5C3;
+  background-color: #f8f8f8;
   padding: 3rem;
   border-radius: 0.6rem;
+  color: #131b23;
 }
 @media screen and (min-width: 768px) {
   .main-sections > section {
@@ -246,12 +236,13 @@ main .hero-text {
 .main-sections > section h2 {
   text-align: center;
   margin-bottom: 1rem;
-  color: black;
+  color: #131b23;
   font-family: "Courier New", Courier, monospace;
 }
 .main-sections > section p {
   max-width: 65ch;
   margin: 0 auto 1em;
+  color: #131b23;
 }
 
 /* Anpassning för boktipsbilden (centrering) */
@@ -259,24 +250,23 @@ main .hero-text {
   max-width: 150px;
   height: auto;
   display: block;
-  margin: 0 auto 1rem;
+  margin: 0;
 }
 
-/* Styling för "Hitta fler boktips/Events"-knappen !!!!!!MÅSTE ÄNDRAS*/
+/* Styling för "Hitta fler boktips/Events"-knappen */
 .more-info-button {
-  background-color: #E8C5C3;
-  color: #f8f8f8;
+  background-color: #f8f8f8;
+  color: #131b23;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border: none;
   border-radius: 0.6rem;
   padding: 0.8rem 1.2rem;
   transition: background-color 0.3s ease;
   /* Använd knappen mixin för basstil */
-  background-color: transparent;
-  color: #131b23;
-  border: 2px solid #131b23;
+  background-color: #e23d41;
+  color: #f8f8f8;
+  border: 2px solid #f8f8f8;
   border-radius: 25px;
-  text-decoration: none;
   display: inline-block;
 }
 .more-info-button:hover {
@@ -286,4 +276,54 @@ main .hero-text {
 .more-info-button:hover {
   background-color: #131b23;
   color: white;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* FOOTER STYLING */
+.footer {
+  background: #E8C5C3;
+  padding: 2rem;
+  color: #f8f8f8;
+}
+.footer .footer-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.footer .footer-links li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.footer .footer-links li a {
+  color: #f8f8f8;
+  text-decoration: none;
+}
+.footer .footer-links li a:hover {
+  text-decoration: underline;
+}
+.footer .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 1.5rem;
+}
+.footer .sponsor-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+.footer > p {
+  text-align: center;
+  margin-top: 2rem;
+}
+.footer > p a {
+  color: #f8f8f8;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */

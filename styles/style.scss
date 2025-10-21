@@ -10,20 +10,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
-    background-color: #ffffff; /* Hela sidan är vit */
-    color: $secondary-text-color;
-    font-family: $font-family;
-    line-height: 1.6;
-}
-
-h2 {
-    padding-bottom: 1rem;
-    font-size: 1.8rem;
-    text-align: center;
-}
-
 /* HEADER OCH NAVIGATION */
 header {
     @include header-flex; /* BAS-STYLING: display: flex, background, etc. */
@@ -39,7 +25,7 @@ main {
     position: relative;
     display: block; 
     padding: 0;
-    background-color: #ffffff; /* Säkerställer vit bakgrund för main */
+    background-color: $primary-color; /* Säkerställer vit bakgrund för main */
 
     img {
         width: 100%;
@@ -47,6 +33,9 @@ main {
         display: block;
         max-height: 500px; 
         object-fit: cover;
+        opacity: 1;
+        border-radius: 8px;
+    
     }
 
     .hero-text {
@@ -54,10 +43,11 @@ main {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        
-        color: white; 
-        text-align: left;
-        font-size: 40px;
+        display: inline-block;
+        background-color: rgba(0,0,0,0.6);
+        color: $primary-color; 
+        text-align: center;
+        font-size: 35px;
         font-weight: bolder;
 
         padding: 1.5rem 2rem;
@@ -70,9 +60,10 @@ main {
 /* MAIN SECTIONS (RESPONSIV TRE-KOLUMNS LAYOUT FÖR INDEX) */
 .main-sections {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 2rem 1rem;
     gap: 3rem; 
+    color: $text-color;
     // RAD 1: TA BORT DENNA LINJE FÖR ATT HA EN VIT BAKGRUND MELLAN KOLUMNERNA:
     // background-color: #ffffff; 
     
@@ -87,11 +78,10 @@ main {
 /* Stil för varje kolumn inuti main-sections */
 .main-sections > section {
     text-align: center;
-    
-
     background-color: $primary-color;
     padding: 3rem; 
     border-radius: $radius;
+    color: $text-color;
 
     
     @media screen and (min-width: 768px) {
@@ -103,40 +93,54 @@ main {
     h2 {
         text-align: center;
         margin-bottom: 1rem;
-        color: black;
+        color: $text-color;
         font-family: 'Courier New', Courier, monospace;
     }
 
     p {
         max-width: 65ch; 
         margin: 0 auto 1em;
+        color: $text-color;
+        
     }
 }
 
 /* Anpassning för boktipsbilden (centrering) */
 .boktips img {
     max-width: 150px;
+
     height: auto;
     display: block;
-    margin: 0 auto 1rem;
+    margin: 0;
 }
 
-/* Styling för "Hitta fler boktips/Events"-knappen !!!!!!MÅSTE ÄNDRAS*/
+/* Styling för "Hitta fler boktips/Events"-knappen */
 .more-info-button {
     @include button-base; /* Använd knappen mixin för basstil */
-    background-color: transparent; 
+    background-color: #e23d41; 
     color: $secondary-text-color;
     border: 2px solid $secondary-text-color; 
     border-radius: 25px; 
-    text-decoration: none;
+    // text-decoration: none;
     display: inline-block;
     
     &:hover {
         background-color: $secondary-text-color;
-        color: white; 
+        color: $text-color; 
     }
 }
+body {
+    background-color: #ffffff; /* Hela sidan är vit */
+    color: $text-color;
+    font-family: $font-family;
+    line-height: 1.6;
+}
 
+h2 {
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
 
 
     
