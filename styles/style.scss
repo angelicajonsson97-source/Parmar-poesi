@@ -2,6 +2,7 @@
 
 @use "variables" as *;
 @use "mixins" as *;
+@use "footer" ;
 
 /* GLOBAL STYLING */
 * {
@@ -141,57 +142,15 @@ h2 {
     text-align: center;
 }
 
-/* FOOTER STYLING */
-.footer {
-    background: $primary-color;
-    padding: 2rem;
-    color: $text-color;
-    
-    .footer-links {
-        list-style: none;
-        padding: 0;
-        margin-bottom: 2rem;
-        text-align: center;
-        
-        li {
-            display: inline-block;
-            margin: 0 0.5rem;
-            
-            a {
-                color: $text-color;
-                text-decoration: none;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
 
-    .social-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin-top: 1.5rem;
-    }
-
-    .sponsor-logos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 15px;
-        margin-top: 1.5rem;
-    }
     
-    & > p {
-        text-align: center;
-        margin-top: 2rem;
+    // & > p {
+    //     text-align: center;
+    //     margin-top: 2rem;
         
-        a {
-            color: $text-color;
-            text-decoration: none;
-        }
-    }
-}
+    //     a {
+    //         color: $text-color;
+    //         text-decoration: none;
+    //     }
+    // }
+
