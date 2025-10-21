@@ -1,131 +1,285 @@
 <!DOCTYPE html>
 <html lang="sv">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-      <title>Pärmar & Poesi</title>
-      <link rel="stylesheet" href="styles/style.css">
-   </head>
-   <body>
-      <header>
-         <a href="index.html"><img src="image/Logga.jpg" alt="Ilistration med stående pärmar och text Pärmar och Poesi"></a>
-         <input type="checkbox" id="menu-toggle" />
-         <label for="menu-toggle" class="menu-icon">&#9776;</label>
-         <nav class="menu">
-            <ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Pärmar & Poesi</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img
+          src="image/Logga.jpg"
+          alt="Ilistration med stående pärmar och text Pärmar och Poesi"
+      /></a>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <nav class="menu">
+        <ul>
           <li><a href="index.html"> Hem </a></li>
           <li><a href="boktips.html"> Boktips </a></li>
           <li><a href="event.html"> Events </a></li>
           <li>
-            
-            <a
-              href="event.html#form1">
-              
-              Anmäl dig</a>
+            <a href="event.html#form1"> Anmäl dig</a>
           </li>
         </ul>
-         </nav>
-      </header>
-      <main>
-         <img src="image/Boktips.jpg" alt="7 st bruna läderbundna böcker som ligger på ett träbord lutande emot varandra" class="mx-auto">
-         <article class="hero-text">
-            <h1>BOKTIPS</h1>
-         </article>
-      </main>
-      
-<section class="boktips">
-    <h2>Veckans boktips</h2>
-    <p>Här är våra boktips för veckan:</p>
-    
-    <ul class="space-y-6">
-        
-        <li class="p-4 border border-gray-200 rounded-lg bg-white shadow-md clearfix">
-            <img src="image/17 juni.jpg" alt="En man som ror en tväeka på ett mörkt hav"
-                 class="w-24 h-24 object-cover float-left mr-4 rounded-md">
-            
-            <h3 class="mt-0 font-bold text-lg">17 juni</h3>
-            <p class="text-sm">
-                av Alex Schulman - Vidar är sig inte lik. Han har blivit avstängd från sin lärartjänst efter en våldsam incident på skolan. Och i en bortglömd kartong hittar han av en slump telefonnumret till familjens gamla sommartorp. När han slår numret svarar hans pappa, som är död sedan länge. Vidar har ringt till den 17 juni 1986, till en dag i sin barndom. Med ens öppnar sig en fallucka till det förflutna. Vidar ringer samtal efter samtal till den 17 juni och börjar kartlägga familjens varje rörelse. Samtidigt blir Vidar föremål för en brottsutredning och han träder över gräns efter gräns. Medan dagen i barndomen långsamt öppnar upp sig, dras snaran i nutid åt. Alex Schulman har skrivit en hisnande roman om en resa i tiden, och om vad som formar en människa.
+      </nav>
+    </header>
+    <main>
+      <img
+        src="image/Boktips.jpg"
+        alt="7 st bruna läderbundna böcker som ligger på ett träbord lutande emot varandra"
+        class="mx-auto"
+      />
+      <article class="hero-text">
+        <h1>BOKTIPS</h1>
+      </article>
+    </main>
+
+    <section class="boktips">
+      <h2>Veckans boktips</h2>
+      <ul class="space-y-6">
+        <li
+          class="p-4 border border-gray-200 rounded-lg bg-white shadow-md overflow-hidden"
+        >
+          <img
+            src="image/17 juni.jpg"
+            alt="Framsidan av boken 17 juni av Alex Schulman, visar en pojke som står vid en sjö."
+            class="object-cover float-left mr-4 rounded-md flex-shrink-0"
+          />
+
+          <h3 class="mt-0 font-bold text-lg">17 juni</h3>
+
+          <p class="text-sm visible-preview">
+            av Alex Schulman - Vidar är sig inte lik. Han har blivit avstängd
+            från sin lärartjänst efter en våldsam incident på skolan. Och i en
+            bortglömd kartong hittar han av en slump telefonnumret till
+            familjens gamla sommartorp.
+          </p>
+
+          <details class="text-sm mt-2">
+            <summary
+              class="book-summary cursor-pointer text-blue-600 hover:text-blue-800 font-semibold inline-block"
+            >
+              Läs mer
+            </summary>
+            <p class="mt-2 text-gray-700 leading-relaxed">              
+              <span class="hidden-content">
+                <br><br>
+                <strong>Detaljer:</strong>
+                <ul class="list-disc ml-6 mt-1 text-xs">
+                  <li>Genre: Spänning/Roman</li>
+                  <li>År: 2021</li>
+                  <li>ISBN: 9789100801205</li>
+                </ul>
+              </span>
             </p>
+          </details>
+        </li>
+
+        <li
+          class="p-4 border border-gray-200 rounded-lg bg-white shadow-md overflow-hidden"
+        >
+          <img
+            src="image/Tveljus del 1.jpg"
+            alt="Framsida på en bok av Tonny Gullöv..."
+            class="object-cover mr-4 rounded-md flex-shrink-0"
+          />
+
+          <h3 class="mt-0 font-bold text-lg">Tveljus del 1</h3>
+
+          <p class="text-sm visible-preview">
+            av Tonny Gulløv - Palnatoke väntar rastlöst på att hans
+            landsförvisning ska hävas. Under tiden bråkar han med sin son Palnar
+            som inte vill bli krigare utan något så fånigt som byggmästare.
+            Palnatoke måste dessutom eskortera den hänförande Anna Billung till
+            en begravning djupt in i Otto den stores enorma rike.
+          </p>
+
+          <details class="text-sm mt-2">
+            <summary
+              class="book-summary cursor-pointer text-blue-600 hover:text-blue-800 font-semibold inline-block"
+            >
+              Läs mer
+            </summary>
+            <p class="mt-2 text-gray-700 leading-relaxed">
+              
+              <span class="hidden-content">
+                <br><br>
+                <strong>Detaljer:</strong>
+                <ul class="list-disc ml-6 mt-1 text-xs">
+                  <li>Genre: Historisk Vikingasaga</li>
+                  <li>År: 2025</li>
+                  <li>ISBN: 9789180862714</li>
+                </ul>
+              </span>
+            </p>
+          </details>
         </li>
         
-        <li class="p-4 bg-gray-100 rounded-md">
-            <h4>Fler tips</h4>
-            <p>Här är det ett urval på fler tips:</p>
+        <li
+          class="p-4 border border-gray-200 rounded-lg bg-white shadow-md overflow-hidden"
+        >
+          <img
+            src="image/Midnatt.jpg"
+            alt="Illustrerad bild på en bokhandel i vinterskrud."
+            class="object-cover mr-4 rounded-md flex-shrink-0"
+          />
+
+          <h3 class="mt-0 font-bold text-lg">Midnatt i den lilla bokhandeln</h3>
+          <p class="text-sm visible-preview">  Men när den äldre ägaren till butiken kommer till Carmen med en
+              julönskan som riskerar att aldrig bli uppfylld, vet Carmen att hon
+              måste göra allt för att få in pengar för att rädda inte bara hans
+              resa, utan även själva butiken. 
+            </p>
+          <details class="text-sm mt-2">
+            <summary
+              class="book-summary cursor-pointer text-blue-600 hover:text-blue-800 font-semibold inline-block"
+            >
+              Läs mer
+            </summary>
+            <p class="mt-2 text-gray-700 leading-relaxed">
+              
+              
+              <span class="hidden-content">
+                <br><br>
+                <strong>Detaljer:</strong>
+                <ul class="list-disc ml-6 mt-1 text-xs">
+                  <li>Genre: Romantik, Feelgood</li>
+                  <li>År: 2021</li>
+                  <li>ISBN: 9789179791505</li>
+                </ul>
+              </span>
+            </p>
+          </details>
         </li>
         
-        <li class="p-4 border border-gray-200 rounded-lg bg-white shadow-md clearfix">
-            <img src="image/Tveljus del 1.jpg" alt="Framsida på en bok av Tonny Gullöv med svart bakgrund och en gammal manlig viking med långt vitt hår och skägg."
-                 class="w-24 h-24 object-cover float-left mr-4 rounded-md">
-            
-            <h3 class="mt-0 font-bold text-lg">Tveljus del 1</h3>
-            <p class="text-sm">
-                av Tonny Gulløv - Palnatoke väntar rastlöst på att hans landsförvisning ska hävas. Under tiden bråkar han med sin son Palnar som inte vill bli krigare utan något så fånigt som byggmästare. Palnatoke måste dessutom eskortera den hänförande Anna Billung till en begravning djupt in i Otto den stores enorma rike. Palnatoke litar inte helt och hållet på Otto, eller på någon annan heller för den delen, och ser till att ta med sig ett par skepp med sina krigare. Och dessa får han god användning för. Efter en del bra och en del mindre bra beslut har Palnatoke gjort sig ovän med en kardinal, några biskopar, en handfull präster, en krigsherre på Lolland och kejsaren av Östfrankiska riket. Den galne jarlen och hans krigare är ohejdbara men nornorna visar sig ännu starkare.
+        <li
+          class="p-4 border border-gray-200 rounded-lg bg-white shadow-md overflow-hidden"
+        >
+          <img
+            src="image/IT.jpg"
+            alt="Omslag till Stephen Kings roman IT."
+            class="object-cover mr-4 rounded-md flex-shrink-0"
+    />
+
+          <h3 class="mt-0 font-bold text-lg">IT</h3>
+
+          <p class="text-sm visible-preview">
+            av Stephen King - Det börjar med försvinnandet av en liten pojke. Det slutar med skräck och död. För i Derry, Maine, lurar något ont under stadens yta. Något som vaknar var tjugonde år för att mata på stadens barn.
+          </p>
+          
+          <details class="text-sm mt-2">
+            <summary
+              class="book-summary cursor-pointer text-blue-600 hover:text-blue-800 font-semibold inline-block"
+            >
+              Läs mer
+            </summary>
+            <p class="mt-2 text-gray-700 leading-relaxed">              
+              <span class="hidden-content">
+                <br><br>
+                <strong>Detaljer:</strong>
+                <ul class="list-disc ml-6 mt-1 text-xs">
+                  <li>Genre: Skräck</li>
+                  <li>År: 1986 (Original)</li>
+                  <li>ISBN: 9789176431234</li>
+                </ul>
+              </span>
             </p>
+          </details>
         </li>
         
-        <li class="p-4 border border-gray-200 rounded-lg bg-white shadow-md clearfix">
-            <img src="image/Midnatt.jpg" alt="Illustrerad bild på en bokhandel i vinterskrud. Framsidans bakgrund är julröd och bokhandelns fasad är ljusgrön och det lyser lampor i fönstren. Utanför går en kvinna och drar efter sig en kälke."
-                 class="w-24 h-24 object-cover float-left mr-4 rounded-md">
-            
-            <h3 class="mt-0 font-bold text-lg">Midnatt i den lilla bokhandeln</h3> 
-            <p class="text-sm">
-                av Jenny Colgan - Carmen har inget att göra. Hennes underbara bokhandel är inspelningsplatsen för en klichéartad julfilm, hon har blivit utkastad från sin systers hus och hennes livs kärlek har just flugit tusentals mil bort. Det verkar bli en mycket olycklig jul! Men när den äldre ägaren till butiken kommer till Carmen med en julönskan som riskerar att aldrig bli uppfylld, vet Carmen att hon måste göra allt för att få in pengar för att rädda inte bara hans resa, utan även själva butiken. Medan hon skyddar sig från en märklig försäljare som återkommande dyker upp i butiken upptäcker Carmen att böcker verkligen kan göra underverk och att de öppnar en hel värld för kunderna att förlora sig i. Men tiden rinner mot sitt slut, och det krävs mer än bara lite ny färg för att lösa Carmens problem. Med hjälp av grannarna, sina brors- och systerdöttrar och en mycket distraherande barnskötare, kanske Carmen just kan uppnå sitt största magitrick hittills...
+        <li
+          class="p-4 border border-gray-200 rounded-lg bg-white shadow-md overflow-hidden"
+        >
+          <img
+            src="image/Sången om Akilles.jpg"
+            alt="Omslag till Sången om Akilles, visar Akilles och Patroklos i en romantisk omfamning."
+            class="object-cover mr-4 rounded-md flex-shrink-0"
+    />
+
+          <h3 class="mt-0 font-bold text-lg">Sången om Akilles</h3>
+
+          <p class="text-sm visible-preview">
+            av Madeline Miller - I den här fängslande romanen återberättas myten om Akilles och Patroklos genom en ny och fräsch lins. Deras relation, som utvecklas från barndomsvänner till älskare, står i centrum för berättelsen.
+          </p>
+          
+          <details class="text-sm mt-2">
+            <summary
+              class="book-summary cursor-pointer text-blue-600 hover:text-blue-800 font-semibold inline-block"
+            >
+              Läs mer
+            </summary>
+            <p class="mt-2 text-gray-700 leading-relaxed">
+              <span class="hidden-content">
+                <br><br>
+                <strong>Detaljer:</strong>
+                <ul class="list-disc ml-6 mt-1 text-xs">
+                  <li>Genre: Historisk Fiktion/Mytologi</li>
+                  <li>År: 2011</li>
+                  <li>ISBN: 9789188851234</li>
+                </ul>
+              </span>
             </p>
+          </details>
         </li>
     </ul>
     
+    
 </section>
 
-      <footer class="footer">
-         <ul class="footer-links">
-            <li>
-               <a href="#">Öppetider</a>
-            </li>
-            <li>
-               <a href="#">Adress</a>
-            </li>
-            <li>
-               <a href="#">Kontakta oss</a>
-            </li>
-            <li>
-               <a href="#">Cookies</a>
-            </li>
-            <li>
-               <a href="#">Integritetspolicy</a>
-            </li>
-            <li>
-               <a href="#">Villkor</a>
-            </li>
-            <li>
-               <a href="#">Sociala medier</a>
-            </li>
-         </ul>
-         <section class="social-links">
-            <a href="#">
-               <img src="images/facebook-icon.png" alt="Facebook" />
-            </a>
-            <a href="#">
-               <img src="images/instagram-icon.png" alt="Instagram" />
-            </a>
-            <a href="#">
-               <img src="images/twitter-pride.png" alt="Twitter" />
-            </a>
-            <a href="#">
-               <img src="images/youtube-icon.png" alt="YouTube" />
-            </a>
-         </section>
-         <section class="sponsor-logos">
-            <img src="postnord.png" alt="PostNord" />
-            <img src="dhl.png" alt="DHL" />
-            <img src="best.png" alt="Best Transport" />
-            <img src="budbee.png" alt="Budbee" />
-            <img src="instabox.png" alt="Instabox" />
-         </section>
-         <p> &copy; 2025 Pärmar & Poesi. Alla rättigheter förbehållna. <a href="mailto:kontakt@parmarpoesi.se">kontakt@parmarpoesi.se</a>
-            <a href="tel:010111222"> Telefon: 010 111 222</a>
-         </p>
-      </footer>
-   </body>
+    <footer class="footer">
+      <ul class="footer-links">
+        <li>
+          <a href="#">Öppetider</a>
+        </li>
+        <li>
+          <a href="#">Adress</a>
+        </li>
+        <li>
+          <a href="#">Kontakta oss</a>
+        </li>
+        <li>
+          <a href="#">Cookies</a>
+        </li>
+        <li>
+          <a href="#">Integritetspolicy</a>
+        </li>
+        <li>
+          <a href="#">Villkor</a>
+        </li>
+        <li>
+          <a href="#">Sociala medier</a>
+        </li>
+      </ul>
+      <section class="social-links">
+        <a href="#">
+          <img src="images/facebook-icon.png" alt="Facebook" />
+        </a>
+        <a href="#">
+          <img src="images/instagram-icon.png" alt="Instagram" />
+        </a>
+        <a href="#">
+          <img src="images/twitter-pride.png" alt="Twitter" />
+        </a>
+        <a href="#">
+          <img src="images/youtube-icon.png" alt="YouTube" />
+        </a>
+      </section>
+      <section class="sponsor-logos">
+        <img src="postnord.png" alt="PostNord" />
+        <img src="dhl.png" alt="DHL" />
+        <img src="best.png" alt="Best Transport" />
+        <img src="budbee.png" alt="Budbee" />
+        <img src="instabox.png" alt="Instabox" />
+      </section>
+      <p>
+        &copy; 2025 Pärmar & Poesi. Alla rättigheter förbehållna.
+        <a href="mailto:kontakt@parmarpoesi.se">kontakt@parmarpoesi.se</a>
+        <a href="tel:010111222"> Telefon: 010 111 222</a>
+      </p>
+    </footer>
+  </body>
 </html>
