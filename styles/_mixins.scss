@@ -1,22 +1,125 @@
-// Här lägger vi in våra mixins för att återanvända kod
-// Mixins: Layout, knappar, responsivitet, animationer – alltså **funktionella kodblock** EX flexbox
-@use "variables" as *;
 
-@mixin flexbox {
+@use "variables" as *;
+@use "sass:color"; 
+
+// Mixin 1: Bas-styling för Header (ersätter @mixin flexbox för headern)
+@mixin header-flex {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem; /* kolla på detta senare*/
+    background-color: $primary-color;
+    position: relative;
+    color: $dark-color;
+
+    // .nav-links-and-button { 
+    //     display: flex;
+    //     align-items: center;
+    //     gap: 1.5rem; // Mellanrum mellan länkarna och knappen
+    // }
+
+    img {
+        height: 50px;
+    }
 }
-@mixin button {
+
+// Mixin 2: Knapp-basstil (ersätter @mixin button)
+@mixin button-base {
     background-color: $primary-color;
     color: $text-color;
     font-family: $font-family;
     border: none;
     border-radius: $radius;
     padding: 0.8rem 1.2rem;
+    transition: background-color 0.3s ease;
 
     &:hover {
-        background-color: color.adjust($primary-color, $lightness: -10%);
+        // Använder sass:color för att justera ljusheten vid hover
+        background-color: color.adjust($primary-color, $lightness: -10%); 
         cursor: pointer;
+    }
+}
+
+// Mixin 3: Navigeringsbeteende (ersätter @mixin menu)
+// Denna hanterar växlingen mellan mobil- och desktopmeny.
+@mixin menu-behavior {
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Hamburgarikon - visas endast i mobilvy */
+    .menu-icon {
+        display: block;
+        font-size: 1.8rem;
+    }
+
+    .menu {
+        list-style: none;
+        display: none; /* Dölj som standard på mobil */
+        flex-direction: column;
+        background-color: $menu-color;
+        width: 150px;
+        position: absolute; /* Använd absolut position för att falla ner under headern */
+        top: 100%;
+        right: 0;
+        z-index: 10;
+        padding: 0;
+        
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    /* Visa menyn när checkboxen är checkad */
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: flex;
+    }
+
+    /* Menylänkar */
+    .menu a {
+        display: block;
+        padding: 10px 15px;
+        color: $menu-bg;
+        text-decoration: none;
+    }
+
+    /* Desktopvy */
+    @media screen and (min-width: 768px) {
+        .menu-icon {
+            display: none;
+        }
+        
+        .menu {
+            display: block; /* Visa menyn */
+            position: static; /* Återställ position */
+            background: $primary-color;
+            width: auto;
+            max-height: none;
+            padding: 0;
+        }
+        
+        .menu ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            margin-left: 1.5rem;
+        }
+        
+        .menu li{
+            margin-left: 3rem;
+            font-size: 1.5rem;
+            
+        }
+
+        .menu a {
+            padding: 1rem 1rem 0 0;
+            color: $text-color; /* Använd mörk färg för synlighet på ljus header */
+        }
+
+        .menu a:hover {
+            color: $dark-color;
+        }
     }
 }

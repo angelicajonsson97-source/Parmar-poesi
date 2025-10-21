@@ -1,90 +1,137 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Pärmar & Poesi</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
     <header>
-        <img src="image/Logga.jpg" alt="Ilistration med stående pärmar och text Pärmar och Poesi">
-        <input type="checkbox" id="menu-toggle"/>
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <nav class="menu">
-            <ul>
-                <li><a href="index.html"> Hem </a></li>
-                <li><a href="boktips.html"> Boktips </a></li>
-                <li><a href="event.html"> Events </a></li>
-                 <li><a href="event.html#form1"> 
-                     <button class="rounded-full bg-gray-500 text-white hover:bg-gray-100 hover:text-black py-3 px-6 font-semibold hover:cursor-pointer">Anmäl dig</button></li>
-            </a>
-        
-            </ul>
-        </nav>
+      <a href="index.html"
+        ><img
+          src="image/Logga.jpg"
+          alt="Ilistration med 3 st stående pärmar i tre olika färger samt text Pärmar och Poesi"
+      /></a>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html"> Hem </a></li>
+          <li><a href="boktips.html"> Boktips </a></li>
+          <li><a href="event.html"> Events </a></li>
+          <li>
+            
+            <a
+              href="event.html#form1"><a class="more-info-button font-bold underline">Anmäl dig</a>
+             
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <img src="image/Home.jpg" alt="Det är mörkt utomhus och det hänger belysning i träden. Man ser framsidan och entrén till en bokhandel vars framsida består av tre stora fönster. Innanför är det upplyst och man kan se flera bokhyllor fulla med böcker."class="mx-auto">
-        <h1>Välkommen till Pärmar & Poesi</h1>
-        <p>Här står det en liten text om vår webbplats</p>
+      <img
+        src="image/Home.jpg"
+        alt="Det är mörkt utomhus och det hänger belysning i träden. Man ser framsidan och entrén till en bokhandel vars framsida består av tre stora fönster. Innanför är det upplyst och man kan se flera bokhyllor fulla med böcker."
+        class="opacity-80"
+      />
+
+      <article class="hero-text">
+        <h1>VÄLKOMMEN TILL <br>PÄRMAR & POESI</h1>
         
-        <button class="rounded-full bg-gray-500 text-white hover:bg-gray-100 hover:text-black py-3 px-6 font-semibold hover:cursor-pointer">Anmäl dig här till kommande Event</button>
+      </article>
     </main>
-    
-           <section class ="about">
-            <h2>Om oss</h2>
-            <p>lkjdölkjaölkdjölkj</p>
-        </section>
-        <section class="boktips">  
-            <h2>Veckans boktips</h2>
-            <p>Här är vår boktips för veckan:</p>
-            <ul>
-                <li><img src="image/17 juni.jpg" alt="c:\Users\ollek\OneDrive\Dokument\Front End\3 HTML och CSS\Examination\Bilder\17 juni.jpg" ><strong>17 juni</strong> av Alex Schulman - Vidar är sig inte lik. Han har blivit avstängd från sin lärartjänst efter en våldsam incident på skolan. Och i en bortglömd kartong hittar han av en slump telefonnumret till familjens gamla sommartorp. När han slår numret svarar hans pappa, som är död sedan länge.
 
-Vidar har ringt till den 17 juni 1986, till en dag i sin barndom. Med ens öppnar sig en fallucka till det förflutna. Vidar ringer samtal efter samtal till den 17 juni och börjar kartlägga familjens varje rörelse.
-
-Samtidigt blir Vidar föremål för en brottsutredning och han träder över gräns efter gräns. Medan dagen i barndomen långsamt öppnar upp sig, dras snaran i nutid åt.
-
-Alex Schulman har skrivit en hisnande roman om en resa i tiden, och om vad som formar en människa.</li>
-                            </ul>
-            <a href="boktips.html" class="more-info-button">Hitta fler boktips</a>
-        </section>
-        <section class="events">
-            <h2>Events</h2>
-             <a href="event.html" class="more-info-button">Information om kommande events</a>
-        </section>
+    <section class="main-sections">
+      <section class="about">
+        <h2>Om oss</h2>
+        <img
+          src="image/OmOss.jpg"
+          alt="fem legofigurer med olika design. En gubbe med blå hjälm och bygox och vit tröja. Gubbe nummer 2 har en röd keps och röda kläder. nummer 3 har svart hjälm med röd rem under hakan och vita kläder. nummer fyra har svart hår och vita kläder med ränder på tröjan. nummer 5 har vit keps och svarta kläder med en polisstjäna på bröstet."
+        />
        
+         <h3> Välkommen till Pärmar & Poesi, mer än bara en bokhandel.</h3> 
+          <p>
+          Vi är en
+          mötesplats, en fristad och en hyllning till det skrivna ordet. Vi tror
+          på den fysiska bokens magi, doften av papper och känslan av en nyligen
+          upptäckt berättelse. Vårt mål är att skapa en gemenskap där läsare kan
+          mötas, utbyta tips och upptäcka sina nästa litterära äventyr.
+        </p>
+      </section>
+
+      <section class="boktips">
+        <h2>Veckans boktips</h2>
+        <img
+          src="image/Poesikväll.jpg"
+          alt="Ryggar av 6 Gamla poesiböcker från hela världen med olika färger"
+        />
+            <p><strong>17 juni</strong></p>
+            <p>av Alex Schulman</p>
+<br>
+            <img
+              src="image/17 juni.jpg"
+              alt="En man som ror en tväeka på ett mörkt hav"
+            />
+          <br>
+        <a href="boktips.html" class="more-info-button">Hitta fler boktips</a>
+      </section>
+
+      <section class="events">
+        <h2>Events</h2>
+        <img src="image/Event.jpg" alt="En uppslagen bok utan text på sidan med ett rött löv som ligger på gräset"/>
+        <p>Välkommen till våra kommande events! Vi kommer under året att anordna flera spännande aktiviteter och evenemang för bokälskare. 
+           Som till exempel:
+            <a>Signeringar med kända författare</a>
+            <a>Poesikvällar</a>
+            <a>Språkcaféer</a>
+           
+           <br>
+       
+           <p class="text-lg font-semibold"> Kommande evenemang:</p>
+               <p>Säkra din plats redan idag genom att anmäla dig via knappen.</p>
+            
+              <img src="image/Halloween.jpg" alt="tre svarta vålnader i form av häxor med hatt framför ett radhusområde i USA"/>
+              <a>Halloween hos Pärmar & Poesi - 31 oktober, kl. 17.00 - 20.00</a>
+            
+        </p>
+
+        <a href="event.html" class="more-info-button">Se vad som händer</a>
+      </section>
+    </section>
 
     <footer class="footer">
-    <p></p>
+      <ul class="footer-links">
+        <li><a href="#">Öppetider</a></li>
+        <li><a href="#">Adress</a></li>
+        <li><a href="#">Kontakta oss</a></li>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="#">Integritetspolicy</a></li>
+        <li><a href="#">Villkor</a></li>
+        <li><a href="#">Sociala medier</a></li>
+      </ul>
 
-    <ul class="footer-links">
-    
-    <li><a href="#">Öppetider</a></li> 
-    <li><a href="#">Adress</a></li>   
-    <li><a href="#">Kontakta oss</a></li>
-    <li><a href="#">Cookies</a></li>
-    <li><a href="#">Integritetspolicy</a></li>
-    <li><a href="#">Villkor</a></li>
-    <li><a href="#">Sociala medier</a></li>
-  </ul>
+      <section class="social-links">
+        <a href="#"><img src="images/facebook-icon.png" alt="facebook" /></a>
+        <a href="#"><img src="images/instagram-icon.png" alt="Instagram" /></a>
+        <a href="#"><img src="images/twitter-pride.png" alt="Twitter" /></a>
+        <a href="#"><img src="images/youtube-icon.png" alt="YouTube" /></a>
+      </section>
 
-  <section class="social-links">
-    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-    <a href="#"><img src="images/twitter-pride.png" alt="Twitter"></a>
-    <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
-  </section>
+      <section class="sponsor-logos">
+        <img src="postnord.png" alt="PostNord" />
+        <img src="dhl.png" alt="DHL" />
+        <img src="best.png" alt="Best Transport" />
+        <img src="budbee.png" alt="Budbee" />
+        <img src="instabox.png" alt="Instabox" />
+      </section>
 
-  <section class="sponsor-logos">
-    <img src="postnord.png" alt="PostNord">
-    <img src="dhl.png" alt="DHL">
-    <img src="best.png" alt="Best Transport">
-    <img src="budbee.png" alt="Budbee">
-    <img src="instabox.png" alt="Instabox">
-  </section>
-    <p>&copy; 2024 Pärmar & Poesi. Alla rättigheter förbehållna. kontakt@parmarpoesi.se 010 111 222</p>
+      <p>
+        &copy; 2025 Pärmar & Poesi. Alla rättigheter förbehållna.
+        <a href="mailto:kontakt@parmarpoesi.se">kontakt@parmarpoesi.se</a>
+        <a href="tel:010111222"> Telefon: 010 111 222</a>
+      </p>
     </footer>
-</body>
+  </body>
 </html>

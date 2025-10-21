@@ -1,87 +1,138 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Pärmar & Poesi</title>
-    <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-    <header>
-        <img src="image/Logga.jpg" alt="Ilistration med stående pärmar och text Pärmar och Poesi">
-        <input type="checkbox" id="menu-toggle"/>
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <nav class="menu">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <title>Pärmar & Poesi</title>
+      <link rel="stylesheet" href="styles/style.css">
+   </head>
+   <body>
+      <header>
+         <a href="index.html"><img src="image/Logga.jpg" alt="Ilistration med stående pärmar och text Pärmar och Poesi"></a>
+         <input type="checkbox" id="menu-toggle" />
+         <label for="menu-toggle" class="menu-icon">&#9776;</label>
+         <nav class="menu">
             <ul>
-                <li><a href="index.html"> Hem </a></li>
-                <li><a href="boktips.html"> Boktips </a></li>
-                <li><a href="event.html"> Events </a></li>
-                <li><a href="#form1"> 
-                     <button class="rounded-full bg-gray-500 text-white hover:bg-gray-100 hover:text-black py-3 px-6 font-semibold hover:cursor-pointer">Anmäl dig</button></li>
-            </a>
-                    </ul>
-        </nav>
-    </header>
-    <main>
-        <img src="image/Event.jpg" alt="En uppslagen bok utan text på sidan med ett rött löv som ligger på gräset"class="mx-auto">
-        <h1>EVENT</h1>
-        <p>Här står det en liten text om vår webbplats</p>
-        <!-- <button class="rounded-full bg-gray-500 text-white hover:bg-gray-100 hover:text-black py-3 px-6 font-semibold hover:cursor-pointer">Anmäl dig här till kommande Event</button> -->
-    </main>
-             <section class="events">
-            <h2>Events</h2>
-            <p>Information om kommande events.</p>
+          <li><a href="index.html"> Hem </a></li>
+          <li><a href="boktips.html"> Boktips </a></li>
+          <li><a href="event.html"> Events </a></li>
+          <li>
             
-            <ul class="grid grid-cols-1 lg:grid-cols-3">
-                <li><img src="image/Sign.jpg" alt="Ett bord med staplar av flera olika böcker."><br><strong>Signering av Alex Schulmans nya bok 17 Juni</strong> Fredag 7 november, kl. 17:00</li>
-                <li><img src="image/Poesikväll.jpg" alt="Gamlga poesibäcker från hela välden i en bokhylla"><br><strong>Poesikväll</strong> xxxxx </li>
-                <li><img src="image/sprakcafe.jpg" alt="Bild på en kvinna med mörkt lockigt hår som skrattar och står ihop med flera personer"><br><strong>Språkcafé</strong> Fredag 24 oktober, 15:00-16:45</li>
+            <a
+              href="event.html#form1">
+              
+              Anmäl dig</a>
+          </li>
+        </ul>
+         </nav>
+      </header>
+      <main>
+
+         
+         <img src="image/Event.jpg" alt="En uppslagen bok utan text på sidan med ett rött löv som ligger på gräset" class="mx-auto">
+         <article class="hero-text">
+            <h1>EVENT</h1>
+         </article>
+      </main>
+      <section class="main-sections">
+         <section class="events">
+            <h2>Events</h2>
+            <p>Vi kommer under året att anordna flera spännande aktiviteter och evenemang för bokälskare.</p>
+            <p class="grid grid-cols-1 gap-3">
+
+               <li>
+                  <img src="image/Halloween.jpg" alt="Halloween">
+                  <h3 class="mt-2 font-semibold">Halloween hos Pärmar& Poesi👻 </h3>
+                  <p>Ansvarig: Kirey Pérez.
+                      </p> 31 oktober, 17.00 - 20.00 Kom och fira Halloween med oss på Pärmar & Poesi! Vi bjuder på spöklika berättelser, läskiga boktips och roliga aktiviteter för både barn och vuxna. Trick or treat! Godis till alla utklädda barn!</p>
+               </li> 
+               <li>
+                  <img src="image/Sign.jpg" alt="Bord med staplade böcker inför signering av Alex Schulmans roman 17 Juni.">
+                  <h3 class="mt-2 font-semibold">Signering av Alex Schulmans nya bok "17 Juni"</h3>
+                  <p>Tisdag 04 november, kl.13.00 - 15.00 Välkommen att träffa Alex Schulman när han signerar sin nya bok. Passa på att få ditt exemplar signerat och ställa frågor om boken och hans författarskap. </p>
+               </li>
+               <li>
+                  <img src="image/Poesikväll.jpg" alt="Ryggar av 6 Gamla poesiböcker från hela världen med olika färger">
+                  <h3 class="mt-2 font-semibold">Poesikväll </h3>
+                  <p> Ansvarig: Eva-Maria Köning
+                     <p> Onsdag 11 november, kl.17.00-19:00
+                        Välkommen till en kväll fylld med poesi och gemenskap! Ta med din favoritdiktsamling och dela med dig av dina tankar. </p>
+               </li>
+               <li>
+                  <img src="image/sprakcafe.jpg" alt="Flera personer, inklusive una kvinna med mörkt lockigt hår, skrattar under ett språkcafé.">
+                  <h3 class="mt-2 font-semibold">Språkcafé</h3>
+                  <p> Ansvarig: Roger Björling
+                     <p> Fredag 24 november, kl.13:00 -16:45 Vi bjuder på kaffe och trevligt sällskap för dig som vill öva din engelska i en avslappnad miljö. Alla är välkomna! </p>
+               </li>
+
+               
             </ul>
-            <br>
-           <br>
-
-             <h3>Anmäl dig i nedan formulär</h3>
-             <br>
-<form class="form" id="form1">
-        <label for="fname">För- och efternamn:</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
-        <label for="email">e-mailadress:</label><br>
-        <input type="text" id="email" name="email" value=""><br><br>
-        <!-- <input type="submit" value="Skicka"> -->
-        <button class="rounded-full bg-gray-500 text-white hover:bg-gray-100 hover:text-black py-3 px-6 font-semibold hover:cursor-pointer">Skicka</button>
-      </form>
-        </section>
-
-   <footer class="footer">
-    <p></p>
-
-    <ul class="footer-links">
-    
-    <li><a href="#">Öppetider</a></li> 
-    <li><a href="#">Adress</a></li>   
-    <li><a href="#">Kontakta oss</a></li>
-    <li><a href="#">Cookies</a></li>
-    <li><a href="#">Integritetspolicy</a></li>
-    <li><a href="#">Villkor</a></li>
-    <li><a href="#">Sociala medier</a></li>
-  </ul>
-
-  <section class="social-links">
-    <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-    <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-    <a href="#"><img src="images/twitter-pride.png" alt="Twitter"></a>
-    <a href="#"><img src="images/youtube-icon.png" alt="YouTube"></a>
-  </section>
-
-  <section class="sponsor-logos">
-    <img src="postnord.png" alt="PostNord">
-    <img src="dhl.png" alt="DHL">
-    <img src="best.png" alt="Best Transport">
-    <img src="budbee.png" alt="Budbee">
-    <img src="instabox.png" alt="Instabox">
-  </section>
-    <p>&copy; 2024 Pärmar & Poesi. Alla rättigheter förbehållna. kontakt@parmarpoesi.se 010 111 222</p>
-    </footer>
-</body>
+            <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Säkra din plats idag</h3>
+            <form class="form max-w-sm mx-auto space-y-4 p-6 bg-white rounded-lg shadow-md" id="form1">
+               <p class="flex flex-col">
+                  <label for="fname" class="text-sm font-medium text-gray-700 mb-1">För- och efternamn:</label>
+                  <input type="text" id="fname" name="fname" class="mt-1 p-2 border border-gray-300 rounded-md focus:ring-gray-500 focus:border-gray-500 shadow-sm" placeholder="John Doe">
+               </p>
+               <p class="flex flex-col">
+                  <label for="email" class="text-sm font-medium text-gray-700 mb-1">E-postadress:</label>
+                  <input type="email" id="email" name="email" class="mt-1 p-2 border border-gray-300 rounded-md focus:ring-gray-500 focus:border-gray-500 shadow-sm" placeholder="exempel@email.se">
+               </p>
+              
+               <button class="w-full rounded-full bg-[#E23D41] text-white 
+           hover:bg-white hover:text-black border border-transparent hover:border-[#E23D41]
+           py-3 px-6 font-semibold hover:cursor-pointer transition duration-150"> Skicka </button>
+            </form>
+         </section>
+      </section>
+      <footer class="footer">
+         <ul class="footer-links">
+            <li>
+               <a href="#">Öppetider</a>
+            </li>
+            <li>
+               <a href="#">Adress</a>
+            </li>
+            <li>
+               <a href="#">Kontakta oss</a>
+            </li>
+            <li>
+               <a href="#">Cookies</a>
+            </li>
+            <li>
+               <a href="#">Integritetspolicy</a>
+            </li>
+            <li>
+               <a href="#">Villkor</a>
+            </li>
+            <li>
+               <a href="#">Sociala medier</a>
+            </li>
+         </ul>
+         <section class="social-links">
+            <a href="#">
+               <img src="images/facebook-icon.png" alt="Facebook" />
+            </a>
+            <a href="#">
+               <img src="images/instagram-icon.png" alt="Instagram" />
+            </a>
+            <a href="#">
+               <img src="images/twitter-pride.png" alt="Twitter" />
+            </a>
+            <a href="#">
+               <img src="images/youtube-icon.png" alt="YouTube" />
+            </a>
+         </section>
+         <section class="sponsor-logos">
+            <img src="postnord.png" alt="PostNord" />
+            <img src="dhl.png" alt="DHL" />
+            <img src="best.png" alt="Best Transport" />
+            <img src="budbee.png" alt="Budbee" />
+            <img src="instabox.png" alt="Instabox" />
+         </section>
+         <p> &copy; 2025 Pärmar & Poesi. Alla rättigheter förbehållna. <a href="mailto:kontakt@parmarpoesi.se">kontakt@parmarpoesi.se</a>
+            <a href="tel:010111222"> Telefon: 010 111 222</a>
+         </p>
+      </footer>
+   </body>
 </html>
