@@ -1,14 +1,15 @@
 @charset "UTF-8";
+
 body {
   font-family: "Arial", sans-serif;
   background-color: #ffffff;
-  color: #333333;
+  color: #131b23;
   line-height: 1.6;
 }
 
 .footer {
   background-color: #E8C5C3;
-  color: #ccc;
+  color: #131b23;
   text-align: center;
   padding: 2rem 1rem;
   margin-top: 16px;
@@ -16,6 +17,9 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
+}
+.footer p {
+  color: #131b23;
 }
 .footer ul {
   list-style: none;
@@ -33,13 +37,13 @@ body {
   }
 }
 .footer .footer-links a {
-  color: black;
+  color: #131b23;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
 }
 .footer .footer-links a:hover {
-  color: hsl(0, 76%, 43%);
+  color: #e23d41;
 }
 .footer .social-links {
   display: flex;
@@ -92,18 +96,18 @@ header {
   background-color: #ffffff;
   position: relative;
   color: #510b02;
+  /* BAS-STYLING: display: flex, background, etc. */
+  /* Hamburgarikon - visas endast i mobilvy */
+  /* Visa menyn när checkboxen är checkad */
+  /* Menylänkar */
+  /* Desktopvy */
+  /* FUNKTIONALITET: meny-logik, ikon-växling */
 }
 header img {
   height: 50px;
 }
-header {
-  /* BAS-STYLING: display: flex, background, etc. */
-}
 header #menu-toggle {
   display: none;
-}
-header {
-  /* Hamburgarikon - visas endast i mobilvy */
 }
 header .menu-icon {
   display: block;
@@ -125,23 +129,14 @@ header .menu ul {
   padding: 0;
   margin: 0;
 }
-header {
-  /* Visa menyn när checkboxen är checkad */
-}
 header #menu-toggle:checked + .menu-icon + .menu {
   display: flex;
-}
-header {
-  /* Menylänkar */
 }
 header .menu a {
   display: block;
   padding: 10px 15px;
   color: #ffffff;
   text-decoration: none;
-}
-header {
-  /* Desktopvy */
 }
 @media screen and (min-width: 768px) {
   header .menu-icon {
@@ -174,8 +169,8 @@ header {
     color: #510b02;
   }
 }
-header {
-  /* FUNKTIONALITET: meny-logik, ikon-växling */
+header img {
+  max-height: 50px;
 }
 
 /* MAIN OCH HERO SEKTION */
@@ -183,6 +178,7 @@ main {
   position: relative;
   display: block;
   padding: 0;
+  background-color: #E8C5C3; /* Säkerställer vit bakgrund för main */
 }
 main img {
   width: 100%;
@@ -191,7 +187,6 @@ main img {
   max-height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
-  object-fit: cover;
   opacity: 1;
   border-radius: 8px;
 }
@@ -236,7 +231,7 @@ main .hero-text {
   background-color: #E8C5C3;
   padding: 3rem;
   border-radius: 0.6rem;
-  color: #f8f8f8;
+  color: #131b23;
 }
 @media screen and (min-width: 768px) {
   .main-sections > section {
@@ -247,48 +242,39 @@ main .hero-text {
 }
 .main-sections > section h2 {
   text-align: center;
-  background-color: #E8C5C3;
-  padding: 3rem;
-  border-radius: 0.6rem;
-  color: #131b23;
-}
-@media screen and (min-width: 768px) {
-  .main-sections > section h2 {
-    flex-basis: 30%;
-    max-width: 33.33%;
-    padding: 1.5rem 1rem;
-  }
-}
-.main-sections > section h2 h2 {
-  text-align: center;
   margin-bottom: 1rem;
   color: #131b23;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
 }
-.main-sections > section h2 p {
+.main-sections > section h3 {
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: #131b23;
+  margin: 1rem;
+}
+.main-sections > section p {
   max-width: 65ch;
   margin: 0 auto 1em;
   color: #131b23;
 }
-.main-sections > section {
-  /* 1. CENTRERING OCH KOLUMN-LAYOUT FÖR HELA SEKTIONEN (Behålls) */
-}
-.main-sections > section .boktips {
+
+/* 1. CENTRERING OCH KOLUMN-LAYOUT FÖR HELA SEKTIONEN (Behålls) */
+.boktips {
   max-width: 768px;
   margin-left: auto;
   margin-right: auto;
   padding: 2rem 1rem;
 }
-.more-info-button:hover {
-  background-color: rgb(222.5, 222.5, 222.5);
-.main-sections > section .boktips ul {
+
+.boktips ul {
   width: 100%;
   list-style: none;
 }
-.main-sections > section {
-  /* 2. STYLING FÖR KORTEN (Behåller din befintliga Tailwind-stil med uppdaterad hover) */
-}
-.main-sections > section .boktips li {
+
+/* 2. STYLING FÖR KORTEN (Behåller din befintliga Tailwind-stil med uppdaterad hover) */
+.boktips li {
   padding: 20px !important; /* Lite mer luft */
   border: 1px solid #eeeeee !important;
   background-color: #ffffff !important;
@@ -297,73 +283,72 @@ main .hero-text {
   cursor: pointer;
   overflow: hidden !important;
   margin-bottom: 25px;
-}
-.more-info-button:hover {
-  background-color: #f8f8f8;
   color: #131b23;
 }
 
-body {
-.main-sections > section .boktips li:hover {
+.boktips li:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
-.main-sections > section {
-  /* 3. STYLING FÖR DEN STÖRRE BILDEN (Vänster sida) */
-}
-.main-sections > section .boktips img {
+
+/* 3. STYLING FÖR DEN STÖRRE BILDEN (Vänster sida) */
+.boktips img {
   max-width: 150px !important;
   height: 220px !important;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   float: left;
   margin-right: 1.5rem !important;
   border-radius: 6px;
 }
-.main-sections > section {
-  /* 4. STYLING FÖR TEXTEN (som flyter runt bilden) */
-}
-.main-sections > section .boktips h3 {
+
+/* 4. STYLING FÖR TEXTEN (som flyter runt bilden) */
+.boktips h3 {
   margin-top: 0 !important;
   font-size: 1.3rem;
-  color: #f8f8f8;
+  color: #131b23;
 }
-.main-sections > section .boktips p.visible-preview {
+
+.boktips p.visible-preview {
   font-size: 0.95rem !important;
   color: #333333;
   margin-bottom: 10px;
   clear: none !important;
 }
-.main-sections > section {
-  /* 5. STYLING FÖR EXPANDERBAR DEL (<details> - Används för metadata) */
-}
-.main-sections > section .book-summary {
+
+/* 5. STYLING FÖR EXPANDERBAR DEL (<details> - Används för metadata) */
+.book-summary {
   display: inline-block;
   margin-top: 5px;
   font-size: 0.8rem;
   text-decoration: underline;
   color: #0056b3;
 }
-.main-sections > section .hidden-content {
+
+.hidden-content {
   display: none;
 }
-.main-sections > section .boktips details p {
+
+.boktips details p {
   margin-top: 10px;
   padding-top: 5px;
 }
-.main-sections > section .boktips li p,
-.main-sections > section .boktips li details {
+
+.boktips li p,
+.boktips li details {
   clear: both;
 }
-.main-sections > section summary {
+
+summary {
   list-style: none;
 }
-.main-sections > section summary::-webkit-details-marker {
+
+summary::-webkit-details-marker {
   display: none;
 }
-.main-sections > section {
-  /* 6. STYLING FÖR RUBRIKEN (Stor och Centrerad) */
-}
-.main-sections > section .boktips h2 {
+
+/* 6. STYLING FÖR RUBRIKEN (Stor och Centrerad) */
+.boktips h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 800;
@@ -374,45 +359,27 @@ body {
   display: inline-block;
   width: 100%;
 }
-.main-sections > section {
-  /* Styling för "Hitta fler boktips/Events"-knappen */
-}
-.main-sections > section .more-info-button {
-  background-color: #E8C5C3;
-  color: #f8f8f8;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  border: none;
-  border-radius: 0.6rem;
-  padding: 0.8rem 1.2rem;
-  transition: background-color 0.3s ease;
-}
-.main-sections > section .more-info-button:hover {
-  background-color: rgb(217.8674698795, 161.3614457831, 158.1325301205);
-  cursor: pointer;
-}
-.main-sections > section .more-info-button {
-  /* Använd knappen mixin för basstil */
+
+/* Styling för "Hitta fler boktips/Events"-knappen */
+.more-info-button {
   background-color: #e23d41;
   color: #131b23;
   border: 2px solid #131b23;
   border-radius: 25px;
   display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
 }
-.main-sections > section .more-info-button:hover {
+.more-info-button:hover {
   background-color: #131b23;
   color: #f8f8f8;
 }
-.main-sections > section body {
+
+body {
   background-color: #ffffff; /* Hela sidan är vit */
-  color: #131b23;
+  color: #f8f8f8;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-}
-.main-sections > section h2 {
-  padding-bottom: 1rem;
-  font-size: 1.8rem;
-  text-align: center;
-  color: #131b23;
 }
 
 h2 {

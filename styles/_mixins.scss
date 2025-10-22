@@ -24,21 +24,21 @@
 }
 
 // Mixin 2: Knapp-basstil (ersätter @mixin button)
-@mixin button-base {
-    background-color: $primary-color;
-    color: $text-color;
-    font-family: $font-family;
-    border: none;
-    border-radius: $radius;
-    padding: 0.8rem 1.2rem;
-    transition: background-color 0.3s ease;
+// @mixin button-base {
+//     background-color: $primary-color;
+//     color: $text-color;
+//     font-family: $font-family;
+//     border: none;
+//     border-radius: $radius;
+//     padding: 0.8rem 1.2rem;
+//     transition: background-color 0.3s ease;
 
-    &:hover {
-        // Använder sass:color för att justera ljusheten vid hover
-        background-color: color.adjust($primary-color, $lightness: -10%); 
-        cursor: pointer;
-    }
-}
+//     &:hover {
+//         // Använder sass:color för att justera ljusheten vid hover
+//         background-color: color.adjust($primary-color, $lightness: -10%); 
+//         cursor: pointer;
+//     }
+// }
 
 // Mixin 3: Navigeringsbeteende (ersätter @mixin menu)
 // Denna hanterar växlingen mellan mobil- och desktopmeny.
