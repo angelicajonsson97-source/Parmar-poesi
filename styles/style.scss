@@ -1,19 +1,17 @@
-// STYLE.SCSS (FIXAD VERSION)
-
 @use "variables" as *;
 @use "mixins" as *;
-@use "footer" ;
+@use "footer";
 
 /* GLOBAL STYLING */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 /* HEADER OCH NAVIGATION */
 header {
-    @include header-flex; /* BAS-STYLING: display: flex, background, etc. */
-    @include menu-behavior; /* FUNKTIONALITET: meny-logik, ikon-växling */
+  @include header-flex; /* BAS-STYLING: display: flex, background, etc. */
+  @include menu-behavior; /* FUNKTIONALITET: meny-logik, ikon-växling */
 
 }
 
@@ -45,11 +43,11 @@ main {
         font-size: clamp(1.5rem, 5vw, 2.5rem);
         font-weight: bolder;
 
-        padding: 1.5rem 2rem;
-        border-radius: $radius;
-        max-width: 400px;
-        width: 80%;
-    }
+    padding: 1.5rem 2rem;
+    border-radius: $radius;
+    max-width: 400px;
+    width: 80%;
+  }
 }
 
 /* MAIN SECTIONS (RESPONSIV TRE-KOLUMNS LAYOUT FÖR INDEX) */
@@ -74,8 +72,22 @@ main {
 
 
 }
+
 /* Stil för varje kolumn inuti main-sections */
 .main-sections > section {
+  text-align: center;
+  background-color: $primary-color;
+  padding: 3rem;
+  border-radius: $radius;
+  color: $text-color;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: 30%;
+    max-width: 33.33%;
+    padding: 1.5rem 1rem;
+  }
+
+  h2 {
     text-align: center;
     background-color: $primary-color;
     padding: 3rem; 
@@ -104,14 +116,109 @@ main {
     }
 }
 
-/* Anpassning för boktipsbilden (centrering) */
-.boktips img {
-    max-width: 150px;
-
-    height: auto;
-    display: block;
-    margin: 0;
+/* 1. CENTRERING OCH KOLUMN-LAYOUT FÖR HELA SEKTIONEN (Behålls) */
+.boktips {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1rem;
 }
+
+.boktips ul {
+  width: 100%;
+  list-style: none;
+}
+
+/* 2. STYLING FÖR KORTEN (Behåller din befintliga Tailwind-stil med uppdaterad hover) */
+.boktips li {
+  padding: 20px !important; /* Lite mer luft */
+  border: 1px solid #eeeeee !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden !important;
+  margin-bottom: 25px;
+}
+
+.boktips li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 3. STYLING FÖR DEN STÖRRE BILDEN (Vänster sida) */
+.boktips img {
+  max-width: 150px !important;
+  height: 220px !important;
+  object-fit: cover;
+  float: left;
+  margin-right: 1.5rem !important;
+  border-radius: 6px;
+}
+
+/* 4. STYLING FÖR TEXTEN (som flyter runt bilden) */
+.boktips h3 {
+  margin-top: 0 !important;
+  font-size: 1.3rem;
+  color: $text-color;
+}
+
+.boktips p.visible-preview {
+  font-size: 0.95rem !important;
+  color: #333333;
+  margin-bottom: 10px;
+  clear: none !important;
+}
+
+/* 5. STYLING FÖR EXPANDERBAR DEL (<details> - Används för metadata) */
+.book-summary {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.hidden-content {
+  display: none;
+}
+
+.boktips details p {
+  margin-top: 10px;
+  padding-top: 5px;
+}
+
+.boktips li p,
+.boktips li details {
+  clear: both;
+}
+
+summary {
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* 6. STYLING FÖR RUBRIKEN (Stor och Centrerad) */
+.boktips h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 4px solid #d8a7a6;
+  display: inline-block;
+  width: 100%;
+}
+// .boktips img {
+//     max-width: 150px;
+
+//     height: auto;
+//     display: block;
+//     margin: 0;
+// }
 
 /* Styling för "Hitta fler boktips/Events"-knappen */
 .more-info-button {
@@ -134,23 +241,10 @@ body {
     font-family: $font-family;
     line-height: 1.6;
 }
-
 h2 {
     padding-bottom: 1rem;
     font-size: 1.8rem;
     text-align: center;
     color: $secondary-text-color;
 }
-
-
-    
-    // & > p {
-    //     text-align: center;
-    //     margin-top: 2rem;
-        
-    //     a {
-    //         color: $text-color;
-    //         text-decoration: none;
-    //     }
-    // }
-
+}

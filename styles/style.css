@@ -234,7 +234,7 @@ main .hero-text {
   background-color: #E8C5C3;
   padding: 3rem;
   border-radius: 0.6rem;
-  color: #131b23;
+  color: #f8f8f8;
 }
 @media screen and (min-width: 768px) {
   .main-sections > section {
@@ -245,26 +245,129 @@ main .hero-text {
 }
 .main-sections > section h2 {
   text-align: center;
+  background-color: #E8C5C3;
+  padding: 3rem;
+  border-radius: 0.6rem;
+  color: #131b23;
+}
+@media screen and (min-width: 768px) {
+  .main-sections > section h2 {
+    flex-basis: 30%;
+    max-width: 33.33%;
+    padding: 1.5rem 1rem;
+  }
+}
+.main-sections > section h2 h2 {
+  text-align: center;
   margin-bottom: 1rem;
   color: #131b23;
   font-family: "Courier New", Courier, monospace;
 }
-.main-sections > section p {
+.main-sections > section h2 p {
   max-width: 65ch;
   margin: 0 auto 1em;
   color: #131b23;
 }
-
-/* Anpassning för boktipsbilden (centrering) */
-.boktips img {
-  max-width: 150px;
-  height: auto;
-  display: block;
-  margin: 0;
+.main-sections > section {
+  /* 1. CENTRERING OCH KOLUMN-LAYOUT FÖR HELA SEKTIONEN (Behålls) */
 }
-
-/* Styling för "Hitta fler boktips/Events"-knappen */
-.more-info-button {
+.main-sections > section .boktips {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1rem;
+}
+.main-sections > section .boktips ul {
+  width: 100%;
+  list-style: none;
+}
+.main-sections > section {
+  /* 2. STYLING FÖR KORTEN (Behåller din befintliga Tailwind-stil med uppdaterad hover) */
+}
+.main-sections > section .boktips li {
+  padding: 20px !important; /* Lite mer luft */
+  border: 1px solid #eeeeee !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  overflow: hidden !important;
+  margin-bottom: 25px;
+}
+.main-sections > section .boktips li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+.main-sections > section {
+  /* 3. STYLING FÖR DEN STÖRRE BILDEN (Vänster sida) */
+}
+.main-sections > section .boktips img {
+  max-width: 150px !important;
+  height: 220px !important;
+  object-fit: cover;
+  float: left;
+  margin-right: 1.5rem !important;
+  border-radius: 6px;
+}
+.main-sections > section {
+  /* 4. STYLING FÖR TEXTEN (som flyter runt bilden) */
+}
+.main-sections > section .boktips h3 {
+  margin-top: 0 !important;
+  font-size: 1.3rem;
+  color: #f8f8f8;
+}
+.main-sections > section .boktips p.visible-preview {
+  font-size: 0.95rem !important;
+  color: #333333;
+  margin-bottom: 10px;
+  clear: none !important;
+}
+.main-sections > section {
+  /* 5. STYLING FÖR EXPANDERBAR DEL (<details> - Används för metadata) */
+}
+.main-sections > section .book-summary {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  color: #0056b3;
+}
+.main-sections > section .hidden-content {
+  display: none;
+}
+.main-sections > section .boktips details p {
+  margin-top: 10px;
+  padding-top: 5px;
+}
+.main-sections > section .boktips li p,
+.main-sections > section .boktips li details {
+  clear: both;
+}
+.main-sections > section summary {
+  list-style: none;
+}
+.main-sections > section summary::-webkit-details-marker {
+  display: none;
+}
+.main-sections > section {
+  /* 6. STYLING FÖR RUBRIKEN (Stor och Centrerad) */
+}
+.main-sections > section .boktips h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 4px solid #d8a7a6;
+  display: inline-block;
+  width: 100%;
+}
+.main-sections > section {
+  /* Styling för "Hitta fler boktips/Events"-knappen */
+}
+.main-sections > section .more-info-button {
   background-color: #E8C5C3;
   color: #f8f8f8;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -273,11 +376,11 @@ main .hero-text {
   padding: 0.8rem 1.2rem;
   transition: background-color 0.3s ease;
 }
-.more-info-button:hover {
+.main-sections > section .more-info-button:hover {
   background-color: rgb(217.8674698795, 161.3614457831, 158.1325301205);
   cursor: pointer;
 }
-.more-info-button {
+.main-sections > section .more-info-button {
   /* Använd knappen mixin för basstil */
   background-color: #e23d41;
   color: #131b23;
@@ -285,19 +388,17 @@ main .hero-text {
   border-radius: 25px;
   display: inline-block;
 }
-.more-info-button:hover {
+.main-sections > section .more-info-button:hover {
   background-color: #131b23;
   color: #f8f8f8;
 }
-
-body {
+.main-sections > section body {
   background-color: #ffffff; /* Hela sidan är vit */
   color: #131b23;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
 }
-
-h2 {
+.main-sections > section h2 {
   padding-bottom: 1rem;
   font-size: 1.8rem;
   text-align: center;
