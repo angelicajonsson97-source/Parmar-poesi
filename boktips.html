@@ -1,5 +1,53 @@
 <!DOCTYPE html>
 <html lang="sv">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <title>Pärmar & Poesi</title>
+      <link rel="stylesheet" href="styles/style.css">
+
+      <!-- boktips SEO -->
+<title>Boktips | Pärmar &amp; Poesi</title>
+<link rel="canonical" href="https://parmarpoesi.se/boktips.html">
+<meta name="description" content="Veckans boktips från Pärmar &amp; Poesi. Upptäck nya favoriter och klassiker rekommenderade av oss.">
+
+<!-- delning och metadata -->
+<meta property="og:title" content="Veckans boktips">
+<meta property="og:description" content="Nya rekommendationer varje vecka – se våra tips.">
+<meta property="og:image" content="https://parmarpoesi.se/image/Boktips.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- strukturerad data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Hem","item":"https://parmarpoesi.se/"},
+    {"@type":"ListItem","position":2,"name":"Boktips","item":"https://parmarpoesi.se/boktips.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"Book","name":"17 juni","author":{"@type":"Person","name":"Alex Schulman"},"image":"https://parmarpoesi.se/image/17%20juni.jpg"},
+    {"@type":"Book","name":"Tveljus del 1","author":{"@type":"Person","name":"Tonny Gullöv"},"image":"https://parmarpoesi.se/image/Tveljus%20del%201.jpg"},
+    {"@type":"Book","name":"Midnatt i den lilla bokhandeln","author":{"@type":"Person","name":"Jenny Colgan"},"image":"https://parmarpoesi.se/image/Midnatt.jpg"}
+  ]
+}
+</script>
+
+   </head>
+   <body>
+      <header>
+         <a href="index.html"><img src="image/Logga.jpg" alt="Ilistration med stående pärmar och text Pärmar och Poesi"></a>
+         <input type="checkbox" id="menu-toggle" />
+         <label for="menu-toggle" class="menu-icon">&#9776;</label>
+         <nav class="menu">
+            <ul>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -230,56 +278,33 @@
     
 </section>
 
-    <footer class="footer">
-      <ul class="footer-links">
-        <li>
-          <a href="#">Öppetider</a>
-        </li>
-        <li>
-          <a href="#">Adress</a>
-        </li>
-        <li>
-          <a href="#">Kontakta oss</a>
-        </li>
-        <li>
-          <a href="#">Cookies</a>
-        </li>
-        <li>
-          <a href="#">Integritetspolicy</a>
-        </li>
-        <li>
-          <a href="#">Villkor</a>
-        </li>
-        <li>
-          <a href="#">Sociala medier</a>
-        </li>
+      <footer class="footer">
+          <ul class="footer-links">
+        <li><a href="oppettider.html">Öppettider</a></li>
+        <li><a href="adress.html">Adress</a></li>
+        <li><a href="kontakt.html">Kontakta oss</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="integritetspolicy.html">Integritetspolicy</a></li>
+        <li><a href="villkor.html">Villkor</a></li>
+        
       </ul>
-      <section class="social-links">
-        <a href="#">
-          <img src="images/facebook-icon.png" alt="Facebook" />
-        </a>
-        <a href="#">
-          <img src="images/instagram-icon.png" alt="Instagram" />
-        </a>
-        <a href="#">
-          <img src="images/twitter-pride.png" alt="Twitter" />
-        </a>
-        <a href="#">
-          <img src="images/youtube-icon.png" alt="YouTube" />
-        </a>
+         <section class="social-links">
+            <a href="https://www.facebook.com/"><img src="image/facebook-icon.png" alt="facebook" /></a>
+        <a href="https://www.instagram.com/"><img src="image/instagram-icon.png" alt="Instagram" /></a>
+        <a href="https://twitter.com/"><img src="image/twitter-pride.png" alt="Twitter" /></a>
+        <a href="https://www.youtube.com/"><img src="image/youtube-icon.png" alt="YouTube" /></a>
       </section>
-      <section class="sponsor-logos">
-        <img src="postnord.png" alt="PostNord" />
-        <img src="dhl.png" alt="DHL" />
-        <img src="best.png" alt="Best Transport" />
-        <img src="budbee.png" alt="Budbee" />
-        <img src="instabox.png" alt="Instabox" />
-      </section>
-      <p>
-        &copy; 2025 Pärmar & Poesi. Alla rättigheter förbehållna.
-        <a href="mailto:kontakt@parmarpoesi.se">kontakt@parmarpoesi.se</a>
-        <a href="tel:010111222"> Telefon: 010 111 222</a>
-      </p>
-    </footer>
-  </body>
+         
+         <section class="sponsor-logos">
+            <img src="postnord.png" alt="PostNord" />
+            <img src="dhl.png" alt="DHL" />
+            <img src="best.png" alt="Best Transport" />
+            <img src="budbee.png" alt="Budbee" />
+            <img src="instabox.png" alt="Instabox" />
+         </section>
+         <p> &copy; 2025 Pärmar & Poesi. Alla rättigheter förbehållna. <a href="mailto:kontakt@parmarpoesi.se">kontakt@parmarpoesi.se</a>
+            <a href="tel:010111222"> Telefon: 010 111 222</a>
+         </p>
+      </footer>
+   </body>
 </html>

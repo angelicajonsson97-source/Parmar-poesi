@@ -4,8 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Pärmar & Poesi</title>
+    <!-- SEO två olika titlar orsakar problem 
+    <title>Pärmar & Poesi</title>-->
     <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- startsida SEO -->
+<title>Pärmar &amp; Poesi – Bokhandel i Stockholm | Boktips & events</title>
+<link rel="canonical" href="https://parmarpoesi.se/">
+<meta name="description" content="Pärmar &amp; Poesi är en bokhandel i Stockholm. Upptäck boktips, poesikvällar och kommande evenemang.">
+
+<!-- delning och metadata -->
+<meta property="og:title" content="Pärmar &amp; Poesi – Bokhandel i Stockholm">
+<meta property="og:description" content="Boktips, events och gemenskap i hjärtat av Stockholm.">
+<meta property="og:image" content="https://parmarpoesi.se/image/Home.jpg">
+<meta property="og:url" content="https://parmarpoesi.se/">
+<meta property="og:locale" content="sv_SE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pärmar &amp; Poesi – Bokhandel i Stockholm">
+<meta name="twitter:description" content="Boktips, events och gemenskap i hjärtat av Stockholm.">
+
+<!-- strukturerad data -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BookStore",
+  "name":"Pärmar & Poesi",
+  "url":"https://parmarpoesi.se/",
+  "image":"https://parmarpoesi.se/image/Logga.jpg",
+  "telephone":"+4610111222",
+  "address":{"@type":"PostalAddress","addressCountry":"SE"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"10:00","closes":"16:00"}
+  ]
+}
+</script>
+
+
   </head>
   <body>
     <header>
@@ -99,28 +134,28 @@
 
     <footer class="footer">
       <ul class="footer-links">
-        <li><a href="#">Öppetider</a></li>
-        <li><a href="#">Adress</a></li>
-        <li><a href="#">Kontakta oss</a></li>
-        <li><a href="#">Cookies</a></li>
-        <li><a href="#">Integritetspolicy</a></li>
-        <li><a href="#">Villkor</a></li>
-        <li><a href="#">Sociala medier</a></li>
+        <li><a href="oppettider.html">Öppettider</a></li>
+        <li><a href="adress.html">Adress</a></li>
+        <li><a href="kontakt.html">Kontakta oss</a></li>
+        <li><a href="cookies.html">Cookies</a></li>
+        <li><a href="integritetspolicy.html">Integritetspolicy</a></li>
+        <li><a href="villkor.html">Villkor</a></li>
+        
       </ul>
 
       <section class="social-links">
-        <a href="#"><img src="images/facebook-icon.png" alt="facebook" /></a>
-        <a href="#"><img src="images/instagram-icon.png" alt="Instagram" /></a>
-        <a href="#"><img src="images/twitter-pride.png" alt="Twitter" /></a>
-        <a href="#"><img src="images/youtube-icon.png" alt="YouTube" /></a>
+        <a href="https://www.facebook.com/"><img src="image/facebook-icon.png" alt="facebook" /></a>
+        <a href="https://www.instagram.com/"><img src="image/instagram-icon.png" alt="Instagram" /></a>
+        <a href="https://twitter.com/"><img src="image/twitter-pride.png" alt="Twitter" /></a>
+        <a href="https://www.youtube.com/"><img src="image/youtube-icon.png" alt="YouTube" /></a>
       </section>
 
       <section class="sponsor-logos">
-        <img src="images/postnord.png" alt="PostNord" />
-        <img src="images/dhl.png" alt="DHL" />
-        <img src="images/best.png" alt="Best Transport" />
-        <img src="images/budbee.png" alt="Budbee" />
-        <img src="images/instabox.png" alt="Instabox" />
+        <img src="image/postnord.png" alt="PostNord" />
+        <img src="image/dhl.png" alt="DHL" />
+        <img src="image/best.png" alt="Best Transport" />
+        <img src="image/budbee.png" alt="Budbee" />
+        <img src="image/instabox.png" alt="Instabox" />
       </section>
 
       <p>

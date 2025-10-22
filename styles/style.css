@@ -189,6 +189,8 @@ main img {
   height: auto;
   display: block;
   max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
   object-fit: cover;
   opacity: 1;
   border-radius: 8px;
@@ -277,6 +279,8 @@ main .hero-text {
   margin-right: auto;
   padding: 2rem 1rem;
 }
+.more-info-button:hover {
+  background-color: rgb(222.5, 222.5, 222.5);
 .main-sections > section .boktips ul {
   width: 100%;
   list-style: none;
@@ -294,6 +298,12 @@ main .hero-text {
   overflow: hidden !important;
   margin-bottom: 25px;
 }
+.more-info-button:hover {
+  background-color: #f8f8f8;
+  color: #131b23;
+}
+
+body {
 .main-sections > section .boktips li:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
@@ -405,4 +415,8 @@ main .hero-text {
   color: #131b23;
 }
 
-/*# sourceMappingURL=style.css.map */
+h2 {
+  padding-bottom: 1rem;
+  font-size: 1.8rem;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
