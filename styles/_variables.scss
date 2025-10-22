@@ -1,17 +1,18 @@
 
 // här lägger vi in våra variabler det vill säga färger, fonter och storlekar
 // Variabler: Färger, typsnitt, spacing, border-radius – alltså **design**
-$primary-color: #f8f8f8;
-$secondary-color: #e8c5c3;
-$text-color: #131b23;
-$secondary-text-color: #f8f8f8;
-$dark-color: #6e6e6e;
+$primary-color: #E8C5C3;
+$secondary-color: #ffffff;
+$text-color: #f8f8f8;
+$secondary-text-color: #131b23;
+$dark-color: #510b02;
+$accent-color: #e23d41;
 $font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $radius: 0.6rem;
 
 // menu
 $menu-breakpoint: 768px;
-$menu-bg: #333;
-$menu-color: #f8f8f8;
+$menu-bg: #ffffff;
+$menu-color: #000000;
 $transition: 0.3s ease;
        

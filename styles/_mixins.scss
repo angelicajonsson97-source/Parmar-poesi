@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem; /* kolla på detta senare*/
-    background-color: $primary-color;
+    background-color: $secondary-color;
     position: relative;
     color: $dark-color;
 
@@ -93,7 +93,7 @@
         .menu {
             display: block; /* Visa menyn */
             position: static; /* Återställ position */
-            background: $primary-color;
+            background: $secondary-color;
             width: auto;
             max-height: none;
             padding: 0;
@@ -115,7 +115,7 @@
 
         .menu a {
             padding: 1rem 1rem 0 0;
-            color: $text-color; /* Använd mörk färg för synlighet på ljus header */
+            color: $secondary-text-color; /* Använd mörk färg för synlighet på ljus header */
         }
 
         .menu a:hover {

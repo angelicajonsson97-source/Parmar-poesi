@@ -89,21 +89,21 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem; /* kolla på detta senare*/
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   position: relative;
-  color: #6e6e6e;
-  /* BAS-STYLING: display: flex, background, etc. */
-  /* Hamburgarikon - visas endast i mobilvy */
-  /* Visa menyn när checkboxen är checkad */
-  /* Menylänkar */
-  /* Desktopvy */
-  /* FUNKTIONALITET: meny-logik, ikon-växling */
+  color: #510b02;
 }
 header img {
   height: 50px;
 }
+header {
+  /* BAS-STYLING: display: flex, background, etc. */
+}
 header #menu-toggle {
   display: none;
+}
+header {
+  /* Hamburgarikon - visas endast i mobilvy */
 }
 header .menu-icon {
   display: block;
@@ -113,7 +113,7 @@ header .menu {
   list-style: none;
   display: none; /* Dölj som standard på mobil */
   flex-direction: column;
-  background-color: #f8f8f8;
+  background-color: #000000;
   width: 150px;
   position: absolute; /* Använd absolut position för att falla ner under headern */
   top: 100%;
@@ -125,14 +125,23 @@ header .menu ul {
   padding: 0;
   margin: 0;
 }
+header {
+  /* Visa menyn när checkboxen är checkad */
+}
 header #menu-toggle:checked + .menu-icon + .menu {
   display: flex;
+}
+header {
+  /* Menylänkar */
 }
 header .menu a {
   display: block;
   padding: 10px 15px;
-  color: #333;
+  color: #ffffff;
   text-decoration: none;
+}
+header {
+  /* Desktopvy */
 }
 @media screen and (min-width: 768px) {
   header .menu-icon {
@@ -141,7 +150,7 @@ header .menu a {
   header .menu {
     display: block; /* Visa menyn */
     position: static; /* Återställ position */
-    background: #f8f8f8;
+    background: #ffffff;
     width: auto;
     max-height: none;
     padding: 0;
@@ -162,11 +171,11 @@ header .menu a {
     color: #131b23; /* Använd mörk färg för synlighet på ljus header */
   }
   header .menu a:hover {
-    color: #6e6e6e;
+    color: #510b02;
   }
 }
-header img {
-  max-height: 50px;
+header {
+  /* FUNKTIONALITET: meny-logik, ikon-växling */
 }
 
 /* MAIN OCH HERO SEKTION */
@@ -174,15 +183,13 @@ main {
   position: relative;
   display: block;
   padding: 0;
-  background-color: #f8f8f8; /* Säkerställer vit bakgrund för main */
 }
 main img {
   width: 100%;
   height: auto;
   display: block;
   max-height: 500px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   opacity: 1;
   border-radius: 8px;
 }
@@ -193,9 +200,9 @@ main .hero-text {
   transform: translate(-50%, -50%);
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.6);
-  color: #f8f8f8;
+  color: #E8C5C3;
   text-align: center;
-  font-size: 35px;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
   font-weight: bolder;
   padding: 1.5rem 2rem;
   border-radius: 0.6rem;
@@ -224,10 +231,10 @@ main .hero-text {
 /* Stil för varje kolumn inuti main-sections */
 .main-sections > section {
   text-align: center;
-  background-color: #f8f8f8;
+  background-color: #E8C5C3;
   padding: 3rem;
   border-radius: 0.6rem;
-  color: #131b23;
+  color: #f8f8f8;
 }
 @media screen and (min-width: 768px) {
   .main-sections > section {
@@ -238,31 +245,46 @@ main .hero-text {
 }
 .main-sections > section h2 {
   text-align: center;
+  background-color: #E8C5C3;
+  padding: 3rem;
+  border-radius: 0.6rem;
+  color: #131b23;
+}
+@media screen and (min-width: 768px) {
+  .main-sections > section h2 {
+    flex-basis: 30%;
+    max-width: 33.33%;
+    padding: 1.5rem 1rem;
+  }
+}
+.main-sections > section h2 h2 {
+  text-align: center;
   margin-bottom: 1rem;
   color: #131b23;
   font-family: "Courier New", Courier, monospace;
 }
-.main-sections > section p {
+.main-sections > section h2 p {
   max-width: 65ch;
   margin: 0 auto 1em;
   color: #131b23;
 }
-
-/* 1. CENTRERING OCH KOLUMN-LAYOUT FÖR HELA SEKTIONEN (Behålls) */
-.boktips {
+.main-sections > section {
+  /* 1. CENTRERING OCH KOLUMN-LAYOUT FÖR HELA SEKTIONEN (Behålls) */
+}
+.main-sections > section .boktips {
   max-width: 768px;
   margin-left: auto;
   margin-right: auto;
   padding: 2rem 1rem;
 }
-
-.boktips ul {
+.main-sections > section .boktips ul {
   width: 100%;
   list-style: none;
 }
-
-/* 2. STYLING FÖR KORTEN (Behåller din befintliga Tailwind-stil med uppdaterad hover) */
-.boktips li {
+.main-sections > section {
+  /* 2. STYLING FÖR KORTEN (Behåller din befintliga Tailwind-stil med uppdaterad hover) */
+}
+.main-sections > section .boktips li {
   padding: 20px !important; /* Lite mer luft */
   border: 1px solid #eeeeee !important;
   background-color: #ffffff !important;
@@ -272,70 +294,66 @@ main .hero-text {
   overflow: hidden !important;
   margin-bottom: 25px;
 }
-
-.boktips li:hover {
+.main-sections > section .boktips li:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
-
-/* 3. STYLING FÖR DEN STÖRRE BILDEN (Vänster sida) */
-.boktips img {
+.main-sections > section {
+  /* 3. STYLING FÖR DEN STÖRRE BILDEN (Vänster sida) */
+}
+.main-sections > section .boktips img {
   max-width: 150px !important;
   height: 220px !important;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   float: left;
   margin-right: 1.5rem !important;
   border-radius: 6px;
 }
-
-/* 4. STYLING FÖR TEXTEN (som flyter runt bilden) */
-.boktips h3 {
+.main-sections > section {
+  /* 4. STYLING FÖR TEXTEN (som flyter runt bilden) */
+}
+.main-sections > section .boktips h3 {
   margin-top: 0 !important;
   font-size: 1.3rem;
-  color: #131b23;
+  color: #f8f8f8;
 }
-
-.boktips p.visible-preview {
+.main-sections > section .boktips p.visible-preview {
   font-size: 0.95rem !important;
   color: #333333;
   margin-bottom: 10px;
   clear: none !important;
 }
-
-/* 5. STYLING FÖR EXPANDERBAR DEL (<details> - Används för metadata) */
-.book-summary {
+.main-sections > section {
+  /* 5. STYLING FÖR EXPANDERBAR DEL (<details> - Används för metadata) */
+}
+.main-sections > section .book-summary {
   display: inline-block;
   margin-top: 5px;
   font-size: 0.8rem;
   text-decoration: underline;
   color: #0056b3;
 }
-
-.hidden-content {
+.main-sections > section .hidden-content {
   display: none;
 }
-
-.boktips details p {
+.main-sections > section .boktips details p {
   margin-top: 10px;
   padding-top: 5px;
 }
-
-.boktips li p,
-.boktips li details {
+.main-sections > section .boktips li p,
+.main-sections > section .boktips li details {
   clear: both;
 }
-
-summary {
+.main-sections > section summary {
   list-style: none;
 }
-
-summary::-webkit-details-marker {
+.main-sections > section summary::-webkit-details-marker {
   display: none;
 }
-
-/* 6. STYLING FÖR RUBRIKEN (Stor och Centrerad) */
-.boktips h2 {
+.main-sections > section {
+  /* 6. STYLING FÖR RUBRIKEN (Stor och Centrerad) */
+}
+.main-sections > section .boktips h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 800;
@@ -346,41 +364,45 @@ summary::-webkit-details-marker {
   display: inline-block;
   width: 100%;
 }
-
-/* Styling för "Hitta fler boktips/Events"-knappen */
-.more-info-button {
-  background-color: #f8f8f8;
-  color: #131b23;
+.main-sections > section {
+  /* Styling för "Hitta fler boktips/Events"-knappen */
+}
+.main-sections > section .more-info-button {
+  background-color: #E8C5C3;
+  color: #f8f8f8;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border: none;
   border-radius: 0.6rem;
   padding: 0.8rem 1.2rem;
   transition: background-color 0.3s ease;
+}
+.main-sections > section .more-info-button:hover {
+  background-color: rgb(217.8674698795, 161.3614457831, 158.1325301205);
+  cursor: pointer;
+}
+.main-sections > section .more-info-button {
   /* Använd knappen mixin för basstil */
   background-color: #e23d41;
-  color: #f8f8f8;
-  border: 2px solid #f8f8f8;
+  color: #131b23;
+  border: 2px solid #131b23;
   border-radius: 25px;
   display: inline-block;
 }
-.more-info-button:hover {
-  background-color: rgb(222.5, 222.5, 222.5);
-  cursor: pointer;
+.main-sections > section .more-info-button:hover {
+  background-color: #131b23;
+  color: #f8f8f8;
 }
-.more-info-button:hover {
-  background-color: #f8f8f8;
-  color: #131b23;
-}
-
-body {
+.main-sections > section body {
   background-color: #ffffff; /* Hela sidan är vit */
   color: #131b23;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
 }
-
-h2 {
+.main-sections > section h2 {
   padding-bottom: 1rem;
   font-size: 1.8rem;
   text-align: center;
-}/*# sourceMappingURL=style.css.map */
+  color: #131b23;
+}
+
+/*# sourceMappingURL=style.css.map */
