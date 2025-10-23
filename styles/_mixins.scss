@@ -12,36 +12,11 @@
     position: relative;
     color: $dark-color;
 
-    // .nav-links-and-button { 
-    //     display: flex;
-    //     align-items: center;
-    //     gap: 1.5rem; // Mellanrum mellan länkarna och knappen
-    // }
-
     img {
         height: 50px;
     }
 }
 
-// Mixin 2: Knapp-basstil (ersätter @mixin button)
-// @mixin button-base {
-//     background-color: $primary-color;
-//     color: $text-color;
-//     font-family: $font-family;
-//     border: none;
-//     border-radius: $radius;
-//     padding: 0.8rem 1.2rem;
-//     transition: background-color 0.3s ease;
-
-//     &:hover {
-//         // Använder sass:color för att justera ljusheten vid hover
-//         background-color: color.adjust($primary-color, $lightness: -10%); 
-//         cursor: pointer;
-//     }
-// }
-
-// Mixin 3: Navigeringsbeteende (ersätter @mixin menu)
-// Denna hanterar växlingen mellan mobil- och desktopmeny.
 @mixin menu-behavior {
     #menu-toggle {
         display: none;
